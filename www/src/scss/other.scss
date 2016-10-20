@@ -1,0 +1,6 @@
+@import "mixins","type","util","variables";
+.banner{
+    .banners{
+        @extend %bigbox;
+    }
+}

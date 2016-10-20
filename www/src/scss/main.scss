@@ -1,0 +1,218 @@
+@import "mixins","type","util","variables";
+
+#header{
+    position: relative;
+}
+.ad{
+    background: url(../image/ad.jpg) no-repeat center center;@extend %bigbox;display: block;height: 50px;position: relative;
+    input{
+        background: transparent;border: none;height: 15px;width: 15px;position: absolute;right:92px;top: 0px;padding: 0;
+    }
+}
+.logo{
+    position: relative;@extend %bigbox;background: url(../image/apps_bg.gif) no-repeat 1095px 40px;
+    .logo_left{
+        float: left;height: 118px;margin: 15px 64px 15px 0;
+        >h1{float: left;margin-right: 18px;}
+        >a{float: right;}
+    }
+    .logo_right{
+        float: left;padding-top: 50px;
+    }
+    #txt{
+        width: 398px;height: 31px;border: 2px solid #51468c;padding-left: 10px;
+    }
+    #but{
+        width: 69px;height: 35px;background:url(../image/but_bg.jpg) repeat-x;color: white;font-size: 14px;vertical-align: top;font-family: "microsoft yahei";cursor: pointer;
+    }
+    .logo_search{
+        margin-bottom: 6px;position: relative;
+        .tst{
+            position: absolute;left: 12px;top: 10px;
+        }
+    }
+    .hot_search{
+        margin-top: 6px;
+        a{
+            margin-right: 25px;color: $fontC-light;
+            &:hover{
+                color: $fontC-aHover-red-l;text-decoration: underline;
+            }
+        }
+    }
+}
+.head_nav{
+    font-family:tahoma,arial,\5b8b\4f53,sans-serif;position: absolute;right: 0px;top: 0px;color: $fontC-light;margin: 12px 0;
+    >span,a{
+        padding: 9px 7px;
+    }
+    a{
+        color: $fontC-light;
+        &:hover{
+            color: $fontC-middle;
+        }
+    }
+    .more{
+        padding-right: 18px;position: relative;
+        &:hover span{border-bottom-color: $fontC-middle;}
+        .arrow{
+            @include arrow(top,4px,$fontC-light);left: 58px;top: 15px;
+        }
+    }
+    .gwc{padding-left: 28px;background: url(../image/gwc.png) no-repeat 11px center;}
+}
+.nav{
+    width: 100%;overflow:hidden;
+    a{
+        font-family: "microsoft yahei";font-size: $fontS-middle;@include align(34px);
+    }
+    >a{
+        float: left;background-color: #382f6b;color: white;text-align: center;width: 180px;margin-right: 70px;
+    }
+    .nav_content{
+        @include align(34px);
+        a{
+            color: $fontC-deep;padding-right: 40px;float:  left;
+            &:hover{
+                color: $fontC-aHover-blue;
+            }
+        }
+        .hot{
+            background: url(../image/hot.gif) no-repeat 55px 0px;
+        }
+    }
+}
+.down{
+    position: absolute;left: 0px;top: 182px;margin: 0;padding: 0;
+    li{
+        width: 178px;height: 62px;background: black;padding-left: 2px;
+    }
+    .hover{
+        margin-left: 2px;padding-left: 0px;
+    }
+    a{
+        color: $fontC-light-l;font-size: 12px;margin-left: 18px;
+        &:hover{
+            text-decoration: underline;color: $fontC-aHover-red-l;
+        }
+    }
+    .title{
+        color: white;font:14px/36px "microsoft yahei";
+        &:hover{
+            color: $fontC-aHover-blue;text-decoration: none;
+        }
+    }
+}
+.banner{
+    margin-bottom: 50px;
+    .banners{
+        @extend %bigbox;
+    }
+    .carousel{
+        padding-left: 180px;position: relative;
+    }
+    .ban_bottom{
+        padding-left: 180px;
+        img{
+            margin: 12px 0 0 10px;float: left;
+        }
+    }
+    .button{
+        position: absolute;left: 555px;bottom: 10px;overflow: hidden;background-color: rgba(0,0,0,0.2);@include borcir(7px);
+        li{
+            width: 10px;height: 10px;float: left;background-color: white;margin: 2px 5px;@include borcir;
+        }
+        .act{
+            background-color: $fontC-aHover-blue;
+        }
+    }
+    .left_side,.right_side{
+        width: 40px;height: 100px;background: url(../image/slide_btn.png) no-repeat;position: absolute;top: 150px;left: 180px;
+    }
+    .right_side{
+        background-position-x: -40px;left: 1160px;
+    }
+}
+.global{
+    @extend %bigbox;padding-bottom: 27px;
+    .title-bar{
+        background-position: 0 -22px;margin-bottom: 10px;
+    }
+    .strickout{
+        ul{
+            margin: 0 auto;width: 400px;padding: 0 23px;overflow: hidden;background-color: white;
+        }
+        li{
+            float: left;font-family: "microsoft yahei";@include align(35px);color: $fontC-light;width: 100px;
+        }
+        span{
+            display: inline-block;width: 35px;height: 35px;margin-right: 5px;background: url(../image/ico_index.png) no-repeat ;background-position-y: -130px;background-position-x: -3px;vertical-align: middle;
+        }
+    }
+    .global_left_top{
+        margin-right: 40px;       
+    }
+}
+.global_left{
+    padding-top: 25px;width: 1000px;float: left;
+    >a{float: left;}
+    ul{}
+    li{
+        float: left;padding: 15px 5px 0;width: 190px;
+        >a{
+            margin: 0 auto;width: 160px;display: block;height: 160px;
+        }
+    }
+    div{
+        padding-left: 40px;
+        >a{
+            font-family: "microsoft yahei";color: $fontC-deep;line-height: 14px;display: block;height: 28px;
+        }
+        span{color: $fontC-deep;font-family: "microsoft yahei";line-height: 20px;}
+    }
+    em{
+        float: left;width: 30px;height: 20px;background: url(../image/ico_index.png) no-repeat -32px -206px;
+    }
+    p{
+        font-weight: bold;font-family: "microsoft yahei";line-height: 20px;
+    }    
+}
+.global_right{
+    padding-top: 25px;width: 180px;float: right;
+    >a{
+        padding: 13px 0;display: block;text-align: right;font-family:"microsoft yahei"; 
+        &:hover{
+            color: $fontC-aHover-blue;
+        }
+    }
+    ul{
+        .waggle{
+            display: block;width: 178px;height: 88px;border: 1px solid #e8e8e8;;overflow: hidden;position: relative;
+        }
+        span{
+            width: 80px;@include align(88px);text-align: center;color: #d33220;font: bold 16px/88px "microsoft yahei";position: absolute;top: 0px;left: 180px;display: block;
+        }
+        li{
+            padding-bottom: 36px;
+        }
+        img{
+            position: absolute;left: 0px;top: 0px;
+        }
+        .mess{
+            font: 14px "microsoft yahei";@include align(28px);display: block;color: #5d5d5d;text-align: center;
+            &:hover{
+                color: $fontC-aHover-blue;
+            }
+        }
+    }
+}
+
+
+
+    
+.title-bar{
+    display: block;width: 201px;height: 19px;margin: 0 auto;background: url(../image/ico_index.png) no-repeat ;
+}
+.strickout{
+    background: url(../image/strickout.png) repeat-x center center;height: 35px;
+}
