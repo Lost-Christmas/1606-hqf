@@ -7,21 +7,650 @@ a {
   text-decoration: none;
 }
 
-body {
-  font: 12px tahoma,arial,\5b8b\4f53,sans-serif;
+body, html, div, dl, dt, dd, ul, li, ol, h1, h2, h3, h4, h5, h6, form, fieldset, input, textarea, p, th, td, a, img, span {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: tahoma,arial,\5b8b\4f53,sans-serif;
 }
 
-.banner .banners {
+ul, dl, li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  border: none;
+}
+
+i, em {
+  font-style: normal;
+}
+
+.ad, .banner .banners, .global, .sale, .auction, .mall, .like {
   width: 1200px;
   margin: 0 auto;
 }
-.banner .banners:after {
+.ad:after, .banner .banners:after, .global:after, .sale:after, .auction:after, .mall:after, .like:after {
   content: ".";
   display: block;
   clear: both;
   height: 0;
   overflow: hidden;
   visibility: hidden;
+}
+
+.sale .sale_mid p a:hover, .auction_right li a:hover, .auction_logo a:hover {
+  color: #463b7f;
+}
+
+.ad {
+  background: url(../image/ad.jpg) no-repeat center center;
+  display: block;
+  height: 50px;
+  position: relative;
+}
+.ad input {
+  background: transparent;
+  border: none;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  right: 92px;
+  top: 0px;
+  padding: 0;
+}
+
+.banner {
+  margin-bottom: 50px;
+}
+.banner .carousel {
+  padding-left: 180px;
+  position: relative;
+}
+.banner .ban_bottom {
+  padding-left: 180px;
+}
+.banner .ban_bottom img {
+  margin: 12px 0 0 10px;
+  float: left;
+}
+.banner .button {
+  position: absolute;
+  left: 555px;
+  bottom: 10px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+}
+.banner .button li {
+  width: 10px;
+  height: 10px;
+  float: left;
+  background-color: white;
+  margin: 2px 5px;
+  border-radius: 50%;
+}
+.banner .button .act {
+  background-color: #463b7f;
+}
+.banner .left_side, .banner .right_side {
+  width: 40px;
+  height: 100px;
+  background: url(../image/slide_btn.png) no-repeat;
+  position: absolute;
+  top: 150px;
+  left: 180px;
+}
+.banner .right_side {
+  background-position-x: -40px;
+  left: 1160px;
+}
+
+.global {
+  padding-bottom: 27px;
+}
+.global .title-bar {
+  background-position: 0 -22px;
+  margin-bottom: 10px;
+}
+.global .strickout ul {
+  margin: 0 auto;
+  width: 400px;
+  padding: 0 23px;
+  overflow: hidden;
+  background-color: white;
+}
+.global .strickout li {
+  float: left;
+  font-family: "microsoft yahei";
+  line-height: 35px;
+  height: 35px;
+  display: block;
+  color: #999;
+  width: 100px;
+}
+.global .strickout span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+  background: url(../image/ico_index.png) no-repeat;
+  background-position-y: -130px;
+  background-position-x: -3px;
+  vertical-align: middle;
+}
+.global .global_left_top {
+  margin-right: 40px;
+}
+
+.global_left {
+  padding-top: 25px;
+  width: 1000px;
+  float: left;
+}
+.global_left > a {
+  float: left;
+}
+.global_left li {
+  float: left;
+  padding: 15px 5px 0;
+  width: 190px;
+}
+.global_left li > a {
+  margin: 0 auto;
+  width: 160px;
+  display: block;
+  height: 160px;
+}
+.global_left div {
+  padding-left: 40px;
+}
+.global_left div > a {
+  font-family: "microsoft yahei";
+  color: #333;
+  line-height: 14px;
+  display: block;
+  height: 28px;
+}
+.global_left div span {
+  color: #333;
+  font-family: "microsoft yahei";
+  line-height: 20px;
+}
+.global_left em {
+  float: left;
+  width: 30px;
+  height: 20px;
+  background: url(../image/ico_index.png) no-repeat -32px -206px;
+}
+.global_left p {
+  font-weight: bold;
+  font-family: "microsoft yahei";
+  line-height: 20px;
+}
+
+.global_right {
+  padding-top: 25px;
+  width: 180px;
+  float: right;
+}
+.global_right > a {
+  padding: 13px 0;
+  display: block;
+  text-align: right;
+  font-family: "microsoft yahei";
+}
+.global_right > a:hover {
+  color: #463b7f;
+}
+
+.sale .title-bar {
+  background-position: 0 -45px;
+}
+.sale .strickout span {
+  background: white;
+  display: block;
+  width: 115px;
+  padding: 0 23px;
+  margin: 0 auto;
+  font: 14px "microsoft yahei";
+  line-height: 35px;
+  height: 35px;
+  display: block;
+}
+.sale .sale_mid {
+  position: relative;
+  overflow: hidden;
+}
+.sale .sale_mid p {
+  text-align: right;
+  height: 27px;
+}
+.sale .mid_left {
+  position: absolute;
+  left: 0px;
+  top: 21px;
+  width: 191px;
+  height: 19px;
+  text-align: center;
+  display: block;
+  background-color: #f5f5f5;
+}
+
+.sale_mid_left {
+  width: 567px;
+  height: 408px;
+  float: left;
+  margin-right: 40px;
+  position: relative;
+}
+.sale_mid_left > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+}
+.sale_mid_left .info {
+  display: block;
+  position: absolute;
+  width: 140px;
+  height: 176px;
+  text-align: center;
+  padding-top: 10px;
+  top: 30%;
+  left: 50px;
+}
+.sale_mid_left .info img {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+.sale_mid_left .info .info_1 {
+  font-size: 16px;
+  padding: 6px 0 12px;
+  border-top: 1px solid black;
+}
+.sale_mid_left .info .info_2 {
+  font-family: "microsoft yahei";
+  border: 1px solid black;
+  width: 96px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 26px;
+  height: 26px;
+  display: block;
+  display: block;
+  margin-top: 12px;
+}
+
+.sale_mid_center {
+  width: 375px;
+  float: left;
+}
+.sale_mid_center > div {
+  width: 375px;
+  height: 189px;
+  position: relative;
+}
+.sale_mid_center > div .info {
+  position: absolute;
+  left: 90px;
+  bottom: 15px;
+  width: 200px;
+  height: 51px;
+  padding-top: 9px;
+  text-align: center;
+  background-color: rgba(1, 1, 1, 0.05);
+}
+.sale_mid_center > div .info_1 {
+  font-family: "microsoft yahei";
+}
+.sale_mid_center > div .info_2 {
+  font-size: 18px;
+}
+.sale_mid_center .sale_mid_center1 {
+  margin-bottom: 30px;
+}
+
+.sale_mid_right {
+  width: 162px;
+  height: 392px;
+  padding: 8px;
+  background: url(../image/sale_right_bg.png) no-repeat;
+  float: right;
+}
+.sale_mid_right dt {
+  padding: 8px 0;
+}
+.sale_mid_right dt a {
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+}
+.sale_mid_right dd {
+  text-align: center;
+}
+.sale_mid_right dd a {
+  font-family: "microsoft yahei";
+  color: #000000;
+}
+.sale_mid_right dd .mid_right_value {
+  color: #333;
+  font-weight: bold;
+  font-family: "microsoft yahei";
+  display: inline-block;
+  margin: 5px 0 8px;
+}
+.sale_mid_right dd .mid_right_time {
+  color: #888;
+  background: url(../image/ico_index.png) no-repeat -264px -139px;
+  padding-left: 18px;
+  line-height: 16px;
+  height: 16px;
+  display: block;
+  display: inline-block;
+}
+
+.sale_bott {
+  padding-bottom: 27px;
+  overflow: hidden;
+}
+.sale_bott li {
+  float: left;
+  margin-left: 24px;
+  padding-top: 40px;
+}
+
+.auction {
+  padding-bottom: 70px;
+}
+.auction .title-bar {
+  background-position: 0 -67px;
+}
+.auction .strickout {
+  text-align: center;
+  margin-bottom: 29px;
+}
+.auction .strickout span {
+  background: white;
+  display: inline-block;
+  padding: 0 23px;
+  font: 14px/35px "microsoft yahei";
+}
+.auction .auction_img {
+  float: left;
+  width: 920px;
+  height: 380px;
+}
+
+.auction_right {
+  width: 241px;
+  float: right;
+}
+.auction_right ul {
+  padding: 15px 23px 0;
+  height: 255px;
+  background: #f3f3f1;
+  margin-bottom: 24px;
+}
+.auction_right li {
+  padding-bottom: 16px;
+  font-family: "microsoft yahei";
+}
+.auction_right li a {
+  font-family: "microsoft yahei";
+  color: black;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.auction_logo {
+  text-align: center;
+}
+.auction_logo .logo_box {
+  width: 102px;
+  height: 33px;
+  background: url(../image/ico_index.png) no-repeat 0px -169px;
+  display: block;
+  margin: 0 auto 9px;
+}
+.auction_logo a {
+  font: 17px "microsoft yahei";
+  color: black;
+}
+.auction_logo #auction_shopnum {
+  font-family: "microsoft yahei";
+  color: #999;
+  line-height: 30px;
+}
+
+.wag .waggle {
+  display: block;
+  width: 178px;
+  height: 88px;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+  position: relative;
+}
+.wag span {
+  width: 80px;
+  line-height: 88px;
+  height: 88px;
+  display: block;
+  text-align: center;
+  color: #d33220;
+  font: bold 16px/88px "microsoft yahei";
+  position: absolute;
+  top: 0px;
+  left: 180px;
+  display: block;
+}
+.wag li {
+  padding-bottom: 36px;
+}
+.wag img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.wag .mess {
+  font: 14px "microsoft yahei";
+  line-height: 28px;
+  height: 28px;
+  display: block;
+  display: block;
+  color: #5d5d5d;
+  text-align: center;
+}
+.wag .mess:hover {
+  color: #463b7f;
+}
+
+.title-bar {
+  display: block;
+  width: 201px;
+  height: 19px;
+  margin: 0 auto;
+  background: url(../image/ico_index.png) no-repeat;
+}
+
+.strickout {
+  background: url(../image/strickout.png) repeat-x center center;
+  height: 35px;
+}
+
+.mall .title-bar {
+  background-position: 0 -87px;
+}
+.mall .strickout {
+  text-align: center;
+}
+.mall .strickout span {
+  background: white;
+  display: inline-block;
+  padding: 0 23px;
+  font: 14px/35px "microsoft yahei";
+}
+.mall h3 {
+  line-height: 32px;
+  height: 32px;
+  display: block;
+  margin-top: 32px;
+  font-weight: normal;
+}
+.mall h3 .more {
+  float: right;
+  margin: 0;
+}
+.mall h3 span {
+  font: 16px/32px "Microsoft Yahei";
+  padding-right: 23px;
+  color: #333;
+}
+.mall h3 a {
+  color: #999;
+  font-family: "microsoft yahei";
+  margin-right: 14px;
+}
+.mall .mall_box_bot {
+  overflow: hidden;
+}
+.mall .mall_box_left {
+  float: left;
+  position: relative;
+  width: 480px;
+  height: 329px;
+}
+.mall .mall_box_left a {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.mall .mall_box_left div {
+  position: absolute;
+  left: 115px;
+  bottom: 15px;
+  background-color: rgba(1, 1, 1, 0.05);
+  padding-top: 20px;
+  width: 247px;
+  height: 65px;
+  text-align: center;
+  color: #333;
+}
+.mall .mall_box_left p {
+  font: 14px/20px "Microsoft Yahei";
+}
+.mall .mall_box_left span {
+  font-size: 18px;
+}
+.mall .mall_box_right {
+  float: right;
+  border: 1px solid #e5e5e5;
+  border-width: 1px 0 0 0;
+  width: 720px;
+}
+.mall .mall_box_right a {
+  float: left;
+  width: 240px;
+  height: 163px;
+  border: 1px solid #e5e5e5;
+  border-width: 0 1px 1px 0;
+  position: relative;
+}
+.mall .mall_box_right .first {
+  width: 237px;
+  height: 327px;
+}
+.mall .mall_box_right span {
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  font-family: "microsoft yahei";
+}
+.mall .mall_box_right .info-1 {
+  color: #2f2f2f;
+  font-size: 14px;
+  top: 30px;
+}
+.mall .mall_box_right .info-2 {
+  color: #888;
+  top: 50px;
+}
+
+.like {
+  padding-bottom: 50px;
+}
+.like .title-bar {
+  background-position: 0 -109px;
+  background-color: white;
+}
+.like .strickout {
+  padding-top: 10px;
+  height: 26px;
+  margin: 60px 0;
+}
+.like .like_box {
+  height: 215px;
+  position: relative;
+  padding: 0 25px;
+}
+.like .like_box a {
+  width: 190px;
+  height: 215px;
+  float: left;
+  padding: 0 20px;
+  text-align: center;
+}
+.like .like_box img {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+.like .like_box .like_name {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: "microsoft yahei";
+  color: #333;
+}
+.like .like_box .like_value {
+  color: #666;
+  font-family: "microsoft yahei";
+}
+.like .like_box .hover {
+  color: #e93b39;
+}
+.like .left_side, .like .right_side {
+  position: absolute;
+  top: 79px;
+  width: 21px;
+  height: 53px;
+  cursor: pointer;
+  background: url(../image/ico_index.png) no-repeat;
+}
+.like .left_side {
+  background-position: -235px -23px;
+  left: 0px;
+}
+.like .right_side {
+  background-position: -257px -23px;
+  right: 0px;
 }
 
 /*# sourceMappingURL=other.css.map */

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 input {
   outline: none;
   border: none;
@@ -20,19 +21,28 @@ ul, dl, li {
 
 img {
   display: block;
+  border: none;
 }
 
-.ad, .logo, .banner .banners, .global {
+i, em {
+  font-style: normal;
+}
+
+.ad, .logo, #foot .foot_mid ul, .foot_top, .foot_bot p {
   width: 1200px;
   margin: 0 auto;
 }
-.ad:after, .logo:after, .banner .banners:after, .global:after {
+.ad:after, .logo:after, #foot .foot_mid ul:after, .foot_top:after, .foot_bot p:after {
   content: ".";
   display: block;
   clear: both;
   height: 0;
   overflow: hidden;
   visibility: hidden;
+}
+
+.foot_top li a:hover, .foot_bot p a:hover {
+  color: #463b7f;
 }
 
 #header {
@@ -81,6 +91,7 @@ img {
   height: 31px;
   border: 2px solid #51468c;
   padding-left: 10px;
+  background: transparent;
 }
 .logo #but {
   width: 69px;
@@ -99,7 +110,9 @@ img {
 .logo .logo_search .tst {
   position: absolute;
   left: 12px;
-  top: 10px;
+  top: 11px;
+  z-index: -1;
+  color: #666;
 }
 .logo .hot_search {
   margin-top: 6px;
@@ -121,8 +134,8 @@ img {
   color: #999;
   margin: 12px 0;
 }
-.head_nav > span, .head_nav a {
-  padding: 9px 7px;
+.head_nav > span, .head_nav > a {
+  padding: 11px 7px 7px;
 }
 .head_nav a {
   color: #999;
@@ -133,9 +146,18 @@ img {
 .head_nav .more {
   padding-right: 18px;
   position: relative;
+  z-index: 2;
+}
+.head_nav .more:hover {
+  padding-right: 17px;
+  border-right: 1px solid #eee;
+  border-left: 1px solid #EEE;
+  padding-left: 6px;
+  background-color: #f5f5f5;
 }
 .head_nav .more:hover span {
   border-bottom-color: #666;
+  left: 57px;
 }
 .head_nav .more .arrow {
   width: 0;
@@ -152,11 +174,34 @@ img {
   border-color: transparent transparent #999 transparent;
   border-top: none;
   left: 58px;
-  top: 15px;
+  top: 17px;
 }
 .head_nav .gwc {
   padding-left: 28px;
   background: url(../image/gwc.png) no-repeat 11px center;
+}
+.head_nav .khfw {
+  position: absolute;
+  background: #f5f5f5;
+  top: 19px;
+  left: 297px;
+  border: 1px solid #eee;
+  z-index: 1;
+  width: 88px;
+  right: 154px;
+  padding: 0 0 5px 11px;
+  display: none;
+}
+.head_nav .khfw a {
+  line-height: 22px;
+  height: 22px;
+  display: block;
+}
+.head_nav .khfw span {
+  line-height: 16px;
+  font-family: "瀹嬩綋";
+  margin-top: 2px;
+  display: block;
 }
 
 .nav {
@@ -205,7 +250,6 @@ img {
 .down li {
   width: 178px;
   height: 62px;
-  background: black;
   padding-left: 2px;
 }
 .down .hover {
@@ -215,7 +259,7 @@ img {
 .down a {
   color: #CCC;
   font-size: 12px;
-  margin-left: 18px;
+  margin-left: 15px;
 }
 .down a:hover {
   text-decoration: underline;
@@ -230,202 +274,138 @@ img {
   text-decoration: none;
 }
 
-.banner {
-  margin-bottom: 50px;
-}
-.banner .carousel {
-  padding-left: 180px;
-  position: relative;
-}
-.banner .ban_bottom {
-  padding-left: 180px;
-}
-.banner .ban_bottom img {
-  margin: 12px 0 0 10px;
-  float: left;
-}
-.banner .button {
+.down_side {
+  top: 180px;
+  left: 180px;
+  background: #fff;
   position: absolute;
-  left: 555px;
-  bottom: 10px;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 7px;
+  width: 330px;
+  border-top: 2px solid #433b7d;
+  border-right: 2px solid #433b7d;
+  border-bottom: 2px solid #433b7d;
+  padding: 0 25px 0 16px;
+  min-height: 420px;
+  z-index: 2;
 }
-.banner .button li {
-  width: 10px;
-  height: 10px;
-  float: left;
-  background-color: white;
-  margin: 2px 5px;
-  border-radius: 50%;
+.down_side dl {
+  padding-bottom: 14px;
+  margin-bottom: 9px;
+  border-bottom: 1px dotted #333;
 }
-.banner .button .act {
+.down_side dt {
+  padding-top: 12px;
+  padding-left: 12px;
+  font-weight: bold;
+  color: #463b7f;
+}
+.down_side dd {
+  padding-top: 14px;
+}
+.down_side dd a {
+  padding: 0 12px;
+  border-right: 1px solid #333;
+  line-height: 17px;
+}
+
+#foot .foot_mid {
   background-color: #463b7f;
 }
-.banner .left_side, .banner .right_side {
-  width: 40px;
-  height: 100px;
-  background: url(../image/slide_btn.png) no-repeat;
-  position: absolute;
-  top: 150px;
-  left: 180px;
+#foot .foot_mid ul {
+  height: 39px;
 }
-.banner .right_side {
-  background-position-x: -40px;
-  left: 1160px;
-}
-
-.global {
-  padding-bottom: 27px;
-}
-.global .title-bar {
-  background-position: 0 -22px;
-  margin-bottom: 10px;
-}
-.global .strickout ul {
-  margin: 0 auto;
-  width: 400px;
-  padding: 0 23px;
-  overflow: hidden;
-  background-color: white;
-}
-.global .strickout li {
+#foot .foot_mid li {
+  padding-left: 105px;
+  font: 14px/39px "microsoft yahei";
   float: left;
-  font-family: "microsoft yahei";
-  line-height: 35px;
-  height: 35px;
-  display: block;
-  color: #999;
-  width: 100px;
+  color: white;
 }
-.global .strickout span {
+#foot .foot_mid span {
+  background: url(../image/foot-mid.png) no-repeat;
   display: inline-block;
-  width: 35px;
-  height: 35px;
-  margin-right: 5px;
-  background: url(../image/ico_index.png) no-repeat;
-  background-position-y: -130px;
-  background-position-x: -3px;
+  width: 27px;
+  height: 23px;
   vertical-align: middle;
-}
-.global .global_left_top {
-  margin-right: 40px;
+  margin-right: 5px;
 }
 
-.global_left {
-  padding-top: 25px;
-  width: 1000px;
-  float: left;
-}
-.global_left > a {
-  float: left;
-}
-.global_left li {
-  float: left;
-  padding: 15px 5px 0;
-  width: 190px;
-}
-.global_left li > a {
-  margin: 0 auto;
-  width: 160px;
-  display: block;
-  height: 160px;
-}
-.global_left div {
-  padding-left: 40px;
-}
-.global_left div > a {
-  font-family: "microsoft yahei";
-  color: #333;
-  line-height: 14px;
-  display: block;
-  height: 28px;
-}
-.global_left div span {
-  color: #333;
-  font-family: "microsoft yahei";
-  line-height: 20px;
-}
-.global_left em {
-  float: left;
-  width: 30px;
-  height: 20px;
-  background: url(../image/ico_index.png) no-repeat -32px -206px;
-}
-.global_left p {
-  font-weight: bold;
-  font-family: "microsoft yahei";
-  line-height: 20px;
-}
-
-.global_right {
-  padding-top: 25px;
-  width: 180px;
-  float: right;
-}
-.global_right > a {
-  padding: 13px 0;
-  display: block;
-  text-align: right;
-  font-family: "microsoft yahei";
-}
-.global_right > a:hover {
-  color: #463b7f;
-}
-.global_right ul .waggle {
-  display: block;
-  width: 178px;
-  height: 88px;
-  border: 1px solid #e8e8e8;
-  overflow: hidden;
+.foot_top {
+  padding: 21px 0 25px 10px;
+  background: url(../image/map.jpg) no-repeat 768px -7px;
   position: relative;
 }
-.global_right ul span {
-  width: 80px;
-  line-height: 88px;
-  height: 88px;
+.foot_top ul {
+  width: 172px;
+  height: 138px;
+  float: left;
+}
+.foot_top .lastul {
+  width: 336px;
+}
+.foot_top .lastul a {
+  padding-right: 65px;
+}
+.foot_top li {
+  font-family: "microsoft yahei";
+  line-height: 21px;
+  height: 21px;
   display: block;
-  text-align: center;
-  color: #d33220;
-  font: bold 16px/88px "microsoft yahei";
+  color: #000000;
+}
+.foot_top .first {
+  padding: 4px 0 8px;
+  font-weight: bold;
+}
+.foot_top a {
+  color: #999;
+  font-family: inherit;
+}
+.foot_top .two {
+  height: 42px;
+  line-height: 16px;
+}
+.foot_top .foot_ewm {
+  width: 240px;
+  height: 136px;
   position: absolute;
-  top: 0px;
-  left: 180px;
-  display: block;
+  right: 10px;
+  bottom: -205px;
 }
-.global_right ul li {
-  padding-bottom: 36px;
-}
-.global_right ul img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-.global_right ul .mess {
-  font: 14px "microsoft yahei";
-  line-height: 28px;
-  height: 28px;
-  display: block;
-  display: block;
-  color: #5d5d5d;
+.foot_top .foot_ewm dd {
+  padding: 10px 0 0;
+  color: #333;
+  font-family: "microsoft yahei";
   text-align: center;
 }
-.global_right ul .mess:hover {
-  color: #463b7f;
+.foot_top .foot_ewm dl {
+  float: left;
 }
 
-.title-bar {
-  display: block;
-  width: 201px;
-  height: 19px;
-  margin: 0 auto;
-  background: url(../image/ico_index.png) no-repeat;
+.foot_bot {
+  padding: 27px 0 30px;
+  background: #f5f5f5;
 }
-
-.strickout {
-  background: url(../image/strickout.png) repeat-x center center;
-  height: 35px;
+.foot_bot p {
+  padding-bottom: 15px;
+}
+.foot_bot span, .foot_bot a {
+  color: #999;
+  padding: 0 10px;
+  font-family: "microsoft yahei";
+}
+.foot_bot .pc {
+  display: inline-block;
+  height: 20px;
+}
+.foot_bot .pc img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.foot_bot .foot_bot_end a {
+  float: left;
+}
+.foot_bot .foot_bot_end a img {
+  width: 108px;
+  height: 40px;
 }
 
 /*# sourceMappingURL=main.css.map */

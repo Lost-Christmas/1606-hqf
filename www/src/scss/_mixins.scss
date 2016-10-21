@@ -40,3 +40,10 @@
 @mixin borcir($c:50%){
     border-radius: $c;
 }
+
+
+//border
+@mixin border-index($t:1px,$r:1px,$b:1px,$l:1px){
+    border: 1px solid #e5e5e5;
+    border-width: $t $r $b $l;
+}

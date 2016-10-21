@@ -20,6 +20,11 @@ ul, dl, li {
 
 img {
   display: block;
+  border: none;
+}
+
+i, em {
+  font-style: normal;
 }
 
 /*# sourceMappingURL=_type.css.map */
