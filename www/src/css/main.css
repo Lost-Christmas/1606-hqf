@@ -246,24 +246,40 @@ i, em {
   top: 182px;
   margin: 0;
   padding: 0;
+  z-index: 2;
+  background-color: #382f6b;
+  border-bottom: 2px solid #382f6b;
 }
 .down li {
   width: 178px;
   height: 62px;
   padding-left: 2px;
 }
-.down .hover {
+.down li.blue {
+  background-color: #463b7f;
+}
+.down li.deepblue {
+  background-color: #382f6b;
+}
+.down li.hover {
   margin-left: 2px;
   padding-left: 0px;
+  background-color: white;
+}
+.down li.hover a {
+  color: #333;
+}
+.down li.hover a:hover {
+  text-decoration: underline;
+  color: #e93b39;
+}
+.down li.hover .title {
+  color: #463b7f;
 }
 .down a {
   color: #CCC;
   font-size: 12px;
   margin-left: 15px;
-}
-.down a:hover {
-  text-decoration: underline;
-  color: #e93b39;
 }
 .down .title {
   color: white;
@@ -283,28 +299,50 @@ i, em {
   border-top: 2px solid #433b7d;
   border-right: 2px solid #433b7d;
   border-bottom: 2px solid #433b7d;
-  padding: 0 25px 0 16px;
+  padding: 0 25px 14px 28px;
   min-height: 420px;
   z-index: 2;
+  display: none;
 }
 .down_side dl {
   padding-bottom: 14px;
   margin-bottom: 9px;
-  border-bottom: 1px dotted #333;
+  background: url(../image/line_1.jpg) repeat-x 0 bottom;
 }
 .down_side dt {
   padding-top: 12px;
-  padding-left: 12px;
   font-weight: bold;
   color: #463b7f;
 }
 .down_side dd {
   padding-top: 14px;
+  overflow: hidden;
 }
 .down_side dd a {
-  padding: 0 12px;
+  padding-right: 12px;
   border-right: 1px solid #333;
-  line-height: 17px;
+  margin: 5px 12px 5px 0;
+  float: left;
+  height: 14px;
+  line-height: 12px;
+  color: #333;
+}
+.down_side dd a:hover {
+  text-decoration: underline;
+  color: #e93b39;
+}
+.down_side > a {
+  width: 120px;
+  line-height: 28px;
+  height: 28px;
+  display: block;
+  float: left;
+  margin-right: 20px;
+  padding-top: 5px;
+  background: #463b7f;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 9px;
 }
 
 #foot .foot_mid {
