@@ -132,8 +132,70 @@
 		]
 	},
 	"mall":{
-		"num":1591
-		
+		"num":1591,
+		"content":[
+			{
+				"a1":"包袋",
+				"a2":["HERMES","CHANEL","LV","PRADA","GUCCI","COACH","BURBERRY"],
+				"a3":"更多包袋>",
+				"img":["image/bag-1.jpg","image/bag-2.jpg","image/bag-3.jpg","image/bag-4.jpg","image/bag-5.jpg","image/bag-6.jpg"],
+				"b1":"BVLGARI、BV、YSL",
+				"b2":"3000买大牌长相品味高级的包包超划算",
+				"info1":["Bottega Veneta包袋","BURBERRY包袋","GUCCI包袋","COACH包袋","Rebecca Minkoff包袋"],
+				"info2":["品牌限时特惠","","品牌特惠","",""]
+			},
+			{
+				"a1":"腕表",
+				"a2":["百达翡丽","劳力士","卡地亚","欧米茄","浪琴","积家","万国"],
+				"a3":"更多腕表>",
+				"img":["image/watch-1.jpg","image/watch-2.jpg","image/watch-3.jpg","image/watch-4.jpg","image/watch-5.jpg","image/watch-6.jpg"],
+				"b1":"Cartier",
+				"b2":"卡地亚腕表6.5折起",
+				"info1":["TISSOT/天梭","LONGINES/浪琴","Police/警察","Unizeit/优立时","Daniel Wellington/丹尼尔惠灵顿 "],
+				"info2":["限时特惠","品牌精选","品牌精选","品牌精选","品牌精选"]
+			},
+			{
+				"a1":"服装",
+				"a2":["BURBERRY","HUGO","BOSS","VERSACE","Dolce&Gabbana"],
+				"a3":"更多服装>",
+				"img":["image/clo-1.jpg","image/clo-2.jpg","image/clo-3.jpg","image/clo-4.jpg","image/clo-5.jpg","image/clo-6.jpg"],
+				"b1":"Armani 阿玛尼全系男装",
+				"b2":"清仓500元起",
+				"info1":["VERSACE/范思哲","GANT/甘特","VERRI/VERRI","RICHMOND/里士满","Dolce&Gabbana/杜嘉班纳"],
+				"info2":["系列精选","品牌推荐","VERRI男装秋冬新款上新","品牌精选","16年秋季男装新款上新"]
+			},
+			{
+			      
+				"a1":"鞋靴",
+				"a2":["Ferragamo","PRADA","TOD'S","Dolce&Gabbana","BALLY","Calvin Klein Collection"],
+				"a3":"更多鞋靴>",
+				"img":["image/shoes-1.jpg","image/shoes-2.jpg","image/shoes-3.jpg","image/shoes-4.jpg","image/shoes-5.jpg","image/shoes-6.jpg"],
+				"b1":"潮鞋也要玩点不一样的",
+				"b2":"999元起",
+				"info1":["Calvin Klein Collection","Roger Vivier/罗杰·维维亚","CHARRIOL","BENATIVE/本那","LANDAX"],
+				"info2":["潮流时尚男鞋","秋款上新","时尚男鞋专场","时尚女鞋专场","男鞋秋冬上新"]
+			},
+			{
+				"a1":"配饰",
+				"a2":["Ray-Ban","FERRAGAMO","GUCCI","BURBERRY","VERSACE","Hermès"],
+				"a3":"更多配饰>",
+				"img":["image/acc-1.jpg","image/acc-2.jpg","image/acc-3.jpg","image/acc-4.jpg","image/acc-5.jpg","image/acc-6.jpg"],
+				"b1":"Gucci Burberry",
+				"b2":"大牌围巾必入经典款",
+				"info1":["BURBERRY/博百利","畅销领带精选","JEEP/吉普","丝巾精选","BALLY/巴利"],
+				"info2":["温暖必备","","出行必备","丝巾精选","休闲腰带推荐"]
+			},
+			{
+				"a1":"首饰",
+				"a2":["HERMES","CARTIER","Bvlgari","CHANEL","Tiffany & Co.","COACH","Swarovski"],
+				"a3":"更多首饰>",
+				"img":["image/jew-1.jpg","image/jew-2.jpg","image/jew-3.jpg","image/jew-4.jpg","image/jew-5.jpg","image/jew-6.jpg"],
+				"b1":"BVLGARI",
+				"b2":"宝格丽新品上新",
+				"info1":["CARTIER/卡地亚","DIOR/迪奥","Vivienne Westwood/维维安韦斯特伍德","BVLGARI/宝格丽","首饰综合"],
+				"info2":["品牌精选","品牌精选","品牌精选","品牌精选","品牌精选"]
+			}
+		]
 	},
 	
 	

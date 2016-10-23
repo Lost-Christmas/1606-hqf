@@ -27,12 +27,11 @@ i, em {
   font-style: normal;
 }
 
-.ad, .banner .banners, .global, .sale, .auction, .mall, .like {
+.ad, .banner .banners, .global, .sale, .auction, .mall, .like, .log_top .log_tops, .log_center, #lo_foot .lo_foot_mid ul, .lo_foot_top, .lo_foot_bot p {
   width: 1200px;
   margin: 0 auto;
 }
-
-.ad:after, .banner .banners:after, .global:after, .sale:after, .auction:after, .mall:after, .like:after {
+.ad:after, .banner .banners:after, .global:after, .sale:after, .auction:after, .mall:after, .like:after, .log_top .log_tops:after, .log_center:after, #lo_foot .lo_foot_mid ul:after, .lo_foot_top:after, .lo_foot_bot p:after {
   content: ".";
   display: block;
   clear: both;
@@ -41,7 +40,7 @@ i, em {
   visibility: hidden;
 }
 
-.sale_mid p a:hover, .auction_right li a:hover, .auction_logo a:hover {
+.sale_mid p a:hover, .auction_right li a:hover, .auction_logo a:hover, .lo_foot_top li a:hover, .lo_foot_bot p a:hover {
   color: #463b7f;
 }
 
@@ -51,7 +50,6 @@ i, em {
   height: 50px;
   position: relative;
 }
-
 .ad input {
   background: transparent;
   border: none;
@@ -66,46 +64,43 @@ i, em {
 .banner {
   margin-bottom: 50px;
 }
-
 .banner .background {
   height: 400px;
   width: 100%;
   float: left;
   position: relative;
+  z-index: -1;
 }
-
 .banner .background div {
   position: absolute;
   display: none;
   height: 100%;
   width: 100%;
 }
-
 .banner .carousel {
   padding-left: 180px;
   position: relative;
   cursor: pointer;
 }
-
 .banner .ban_bottom {
   padding-left: 180px;
+  height: 160px;
 }
-
 .banner .ban_bottom img {
   margin: 12px 0 0 10px;
   float: left;
   cursor: pointer;
 }
-
 .banner .button {
   position: absolute;
   left: 555px;
   bottom: 10px;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: black;
   border-radius: 7px;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
 }
-
 .banner .button li {
   width: 10px;
   height: 10px;
@@ -114,11 +109,9 @@ i, em {
   margin: 2px 5px;
   border-radius: 50%;
 }
-
 .banner .button .act {
   background-color: #463b7f;
 }
-
 .banner .left_side, .banner .right_side {
   width: 40px;
   height: 100px;
@@ -129,7 +122,6 @@ i, em {
   opacity: .5;
   filter: alpha(opacity=50);
 }
-
 .banner .right_side {
   background-position-x: -40px;
   left: 1160px;
@@ -140,7 +132,6 @@ i, em {
   width: 1020px;
   height: 400px;
 }
-
 .imgbox li {
   position: absolute;
   top: 0px;
@@ -150,12 +141,10 @@ i, em {
   display: none;
   overflow: hidden;
 }
-
 .imgbox .bigimg {
   position: absolute;
   left: -10px;
 }
-
 .imgbox .smallimg {
   position: absolute;
   right: -10px;
@@ -164,12 +153,10 @@ i, em {
 .global {
   padding-bottom: 27px;
 }
-
 .global .title-bar {
   background-position: 0 -22px;
   margin-bottom: 10px;
 }
-
 .global .strickout ul {
   margin: 0 auto;
   width: 400px;
@@ -177,7 +164,6 @@ i, em {
   overflow: hidden;
   background-color: white;
 }
-
 .global .strickout li {
   float: left;
   font-family: "microsoft yahei";
@@ -187,7 +173,6 @@ i, em {
   color: #999;
   width: 100px;
 }
-
 .global .strickout span {
   display: inline-block;
   width: 35px;
@@ -198,7 +183,6 @@ i, em {
   background-position-x: -3px;
   vertical-align: middle;
 }
-
 .global .global_left_top {
   margin-right: 40px;
 }
@@ -208,28 +192,23 @@ i, em {
   width: 1000px;
   float: left;
 }
-
 .global_left > a {
   float: left;
 }
-
 .global_left li {
   float: left;
   padding: 15px 5px 0;
   width: 190px;
 }
-
 .global_left li > a {
   margin: 0 auto;
   width: 160px;
   display: block;
   height: 160px;
 }
-
 .global_left div {
   padding-left: 40px;
 }
-
 .global_left div > a {
   font-family: "microsoft yahei";
   color: #333;
@@ -237,20 +216,17 @@ i, em {
   display: block;
   height: 28px;
 }
-
 .global_left div span {
   color: #333;
   font-family: "microsoft yahei";
   line-height: 20px;
 }
-
 .global_left em {
   float: left;
   width: 30px;
   height: 20px;
   background: url(../image/ico_index.png) no-repeat -32px -206px;
 }
-
 .global_left p {
   font-weight: bold;
   font-family: "microsoft yahei";
@@ -261,8 +237,8 @@ i, em {
   padding-top: 25px;
   width: 180px;
   float: right;
+  height: 655px;
 }
-
 .global_right > a {
   padding: 13px 0;
   display: block;
@@ -270,7 +246,6 @@ i, em {
   font-family: "microsoft yahei";
   color: black;
 }
-
 .global_right > a:hover {
   color: #463b7f;
 }
@@ -278,7 +253,6 @@ i, em {
 .sale .title-bar {
   background-position: 0 -45px;
 }
-
 .sale .strickout span {
   background: white;
   display: block;
@@ -290,7 +264,6 @@ i, em {
   height: 35px;
   display: block;
 }
-
 .sale .mid_left {
   position: absolute;
   left: 0px;
@@ -307,16 +280,13 @@ i, em {
   position: relative;
   overflow: hidden;
 }
-
 .sale_mid p {
   text-align: right;
   height: 27px;
 }
-
 .sale_mid p a {
   color: black;
 }
-
 .sale_mid p a:hover {
   color: #463b7f;
 }
@@ -328,7 +298,6 @@ i, em {
   margin-right: 40px;
   position: relative;
 }
-
 .sale_mid_left > a {
   display: block;
   height: 100%;
@@ -338,7 +307,6 @@ i, em {
   top: 0px;
   z-index: 2;
 }
-
 .sale_mid_left .info {
   display: block;
   position: absolute;
@@ -350,20 +318,17 @@ i, em {
   left: 50px;
   background-color: white;
 }
-
 .sale_mid_left .info img {
   width: 90px;
   height: 90px;
   margin: 0 auto;
   margin-bottom: 8px;
 }
-
 .sale_mid_left .info .info_1 {
   font-size: 16px;
   padding: 6px 0 12px;
   border-top: 1px solid black;
 }
-
 .sale_mid_left .info .info_2 {
   font-family: "microsoft yahei";
   border: 1px solid black;
@@ -381,13 +346,11 @@ i, em {
   width: 375px;
   float: left;
 }
-
 .sale_mid_center > div {
   width: 375px;
   height: 189px;
   position: relative;
 }
-
 .sale_mid_center > div .info {
   position: absolute;
   left: 90px;
@@ -400,15 +363,12 @@ i, em {
   opacity: 0.75;
   filter: alpha(opacity=75);
 }
-
 .sale_mid_center > div .info_1 {
   font-family: "microsoft yahei";
 }
-
 .sale_mid_center > div .info_2 {
   font-size: 18px;
 }
-
 .sale_mid_center .sale_mid_center1 {
   margin-bottom: 30px;
 }
@@ -420,27 +380,22 @@ i, em {
   background: url(../image/sale_right_bg.png) no-repeat;
   float: right;
 }
-
 .sale_mid_right dt {
   padding: 8px 0;
 }
-
 .sale_mid_right dt a {
   width: 120px;
   height: 120px;
   display: block;
   margin: 0 auto;
 }
-
 .sale_mid_right dd {
   text-align: center;
 }
-
 .sale_mid_right dd a {
   font-family: "microsoft yahei";
   color: #000000;
 }
-
 .sale_mid_right dd .mid_right_value {
   color: #333;
   font-weight: bold;
@@ -448,7 +403,6 @@ i, em {
   display: inline-block;
   margin: 5px 0 8px;
 }
-
 .sale_mid_right dd .mid_right_time {
   color: #888;
   background: url(../image/ico_index.png) no-repeat -264px -139px;
@@ -462,8 +416,8 @@ i, em {
 .sale_bott {
   padding-bottom: 27px;
   overflow: hidden;
+  height: 194px;
 }
-
 .sale_bott li {
   float: left;
   margin-left: 24px;
@@ -473,23 +427,19 @@ i, em {
 .auction {
   padding-bottom: 70px;
 }
-
 .auction .title-bar {
   background-position: 0 -67px;
 }
-
 .auction .strickout {
   text-align: center;
   margin-bottom: 29px;
 }
-
 .auction .strickout span {
   background: white;
   display: inline-block;
   padding: 0 23px;
   font: 14px/35px "microsoft yahei";
 }
-
 .auction .auction_img {
   float: left;
   width: 920px;
@@ -500,19 +450,16 @@ i, em {
   width: 241px;
   float: right;
 }
-
 .auction_right ul {
   padding: 15px 23px 0;
   height: 255px;
   background: #f3f3f1;
   margin-bottom: 24px;
 }
-
 .auction_right li {
   padding-bottom: 16px;
   font-family: "microsoft yahei";
 }
-
 .auction_right li a {
   font-family: "microsoft yahei";
   color: black;
@@ -526,7 +473,6 @@ i, em {
 .auction_logo {
   text-align: center;
 }
-
 .auction_logo .logo_box {
   width: 102px;
   height: 33px;
@@ -534,12 +480,10 @@ i, em {
   display: block;
   margin: 0 auto 9px;
 }
-
 .auction_logo a {
   font: 17px "microsoft yahei";
   color: black;
 }
-
 .auction_logo #auction_shopnum {
   font-family: "microsoft yahei";
   color: #999;
@@ -554,7 +498,6 @@ i, em {
   overflow: hidden;
   position: relative;
 }
-
 .wag span {
   width: 80px;
   line-height: 88px;
@@ -567,11 +510,9 @@ i, em {
   top: 0px;
   left: 180px;
 }
-
 .wag li {
   padding-bottom: 36px;
 }
-
 .wag img {
   position: absolute;
   left: 0px;
@@ -579,7 +520,6 @@ i, em {
   width: 178px;
   height: 88px;
 }
-
 .wag .mess {
   font: 14px "microsoft yahei";
   line-height: 28px;
@@ -589,7 +529,6 @@ i, em {
   color: #5d5d5d;
   text-align: center;
 }
-
 .wag .mess:hover {
   color: #463b7f;
 }
@@ -610,18 +549,15 @@ i, em {
 .mall .title-bar {
   background-position: 0 -87px;
 }
-
 .mall .strickout {
   text-align: center;
 }
-
 .mall .strickout span {
   background: white;
   display: inline-block;
   padding: 0 23px;
   font: 14px/35px "microsoft yahei";
 }
-
 .mall h3 {
   line-height: 32px;
   height: 32px;
@@ -629,39 +565,32 @@ i, em {
   margin-top: 32px;
   font-weight: normal;
 }
-
 .mall h3 .more {
   float: right;
   margin: 0;
 }
-
 .mall h3 span {
   font: 16px/32px "Microsoft Yahei";
   padding-right: 23px;
   color: #333;
 }
-
 .mall h3 a {
   color: #999;
   font-family: "microsoft yahei";
   margin-right: 14px;
 }
-
 .mall h3 a:hover {
   color: #463b7f;
 }
-
 .mall .mall_box_bot {
   overflow: hidden;
 }
-
 .mall .mall_box_left {
   float: left;
   position: relative;
   width: 480px;
   height: 329px;
 }
-
 .mall .mall_box_left a {
   display: block;
   position: absolute;
@@ -671,34 +600,32 @@ i, em {
   height: 100%;
   z-index: 2;
 }
-
 .mall .mall_box_left div {
   position: absolute;
   left: 115px;
   bottom: 15px;
-  background-color: rgba(1, 1, 1, 0.05);
+  background-color: white;
   padding-top: 20px;
   width: 247px;
   height: 65px;
   text-align: center;
   color: #333;
+  opacity: 0.85;
+  filter: alpha(opacity=85);
 }
-
 .mall .mall_box_left p {
   font: 14px/20px "Microsoft Yahei";
 }
-
 .mall .mall_box_left span {
   font-size: 18px;
+  font-family: tahoma "microsoft yahei";
 }
-
 .mall .mall_box_right {
   float: right;
   border: 1px solid #e5e5e5;
   border-width: 1px 0 0 0;
   width: 720px;
 }
-
 .mall .mall_box_right a {
   float: left;
   width: 240px;
@@ -707,25 +634,21 @@ i, em {
   border-width: 0 1px 1px 0;
   position: relative;
 }
-
 .mall .mall_box_right .first {
   width: 237px;
   height: 327px;
 }
-
 .mall .mall_box_right span {
   position: absolute;
   left: 20px;
   top: 0px;
   font-family: "microsoft yahei";
 }
-
 .mall .mall_box_right .info-1 {
   color: #2f2f2f;
   font-size: 14px;
   top: 30px;
 }
-
 .mall .mall_box_right .info-2 {
   color: #888;
   top: 50px;
@@ -734,32 +657,27 @@ i, em {
 .like {
   padding-bottom: 50px;
 }
-
 .like .title-bar {
   background-position: 0 -109px;
   background-color: white;
 }
-
 .like .strickout {
   padding-top: 10px;
   height: 26px;
   margin: 60px 0;
 }
-
 .like .like_box {
   height: 215px;
   position: relative;
   padding: 0 25px;
   overflow: hidden;
 }
-
 .like .like_box .likebox {
   position: relative;
   height: 100%;
   top: 0px;
   overflow: hidden;
 }
-
 .like .like_box a {
   width: 190px;
   height: 215px;
@@ -770,14 +688,12 @@ i, em {
   float: left;
   left: 0px;
 }
-
 .like .like_box img {
   width: 160px;
   height: 160px;
   margin: 0 auto;
   margin-bottom: 25px;
 }
-
 .like .like_box .like_name {
   display: inline-block;
   width: 100%;
@@ -787,16 +703,13 @@ i, em {
   font-family: "microsoft yahei";
   color: #333;
 }
-
 .like .like_box .like_value {
   color: #666;
   font-family: "microsoft yahei";
 }
-
 .like .like_box .hover {
   color: #e93b39;
 }
-
 .like .left-side, .like .right-side {
   position: absolute;
   top: 79px;
@@ -805,13 +718,306 @@ i, em {
   cursor: pointer;
   background: url(../image/ico_index.png) no-repeat;
 }
-
 .like .left-side {
   background-position: -235px -23px;
   left: 0px;
 }
-
 .like .right-side {
   background-position: -257px -23px;
   right: 0px;
 }
+
+.rightbar {
+  position: fixed;
+  top: 25%;
+  right: 10px;
+  display: none;
+}
+.rightbar li {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  background-color: white;
+}
+.rightbar a {
+  width: 75px;
+  height: 30px;
+  display: block;
+  color: black;
+  font: 12px "microsoft yahei";
+  text-decoration: none;
+  line-height: 30px;
+  position: relative;
+  background-color: white;
+}
+.rightbar a:hover span {
+  background-color: white;
+  z-index: 2;
+  display: block;
+}
+.rightbar span {
+  display: none;
+  position: absolute;
+  width: 75px;
+  height: 30px;
+  background-color: white;
+  z-index: -1;
+  left: 0px;
+  top: 0px;
+  color: #e93b39;
+  font-size: 14px;
+}
+.rightbar span.active {
+  z-index: 2;
+  line-height: 27px;
+  height: 27px;
+  display: block;
+  border-bottom: 3px solid black;
+  font-weight: bold;
+}
+.rightbar .top {
+  background: transparent url(../image/ico_index.png) no-repeat -251px -76px;
+  width: 75px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#login {
+  background: #fdf8f4 url(../image/login_01.jpg) no-repeat center top;
+}
+
+.log_top {
+  background-color: black;
+}
+.log_top .log_tops {
+  text-align: right;
+  height: 70px;
+}
+.log_top .log_tops img {
+  float: left;
+}
+.log_top .log_tops a {
+  padding: 0 10px;
+  color: #999;
+  line-height: 70px;
+}
+.log_top .log_tops a:hover {
+  color: #c69c6d;
+}
+
+.log_center {
+  height: 780px;
+}
+.log_center form {
+  margin-top: 110px;
+  padding: 30px 35px;
+  float: right;
+  width: 310px;
+  background-color: white;
+}
+.log_center #lo_yzm {
+  width: 115px;
+}
+
+.lo_form input {
+  width: 298px;
+  height: 20px;
+  line-height: 20px;
+  padding: 10px 5px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'microsoft yahei';
+  vertical-align: middle;
+  color: #333;
+}
+.lo_form .strong {
+  display: inline-block;
+  visibility: hidden;
+  margin-left: 50px;
+  height: 30px;
+  line-height: 30px;
+}
+.lo_form .strong .low, .lo_form .strong .mid, .lo_form .strong .hig {
+  width: 50px;
+  height: 14px;
+  display: inline-block;
+  background-color: #D6D6D6;
+  line-height: 12px;
+  text-align: center;
+  margin-right: 5px;
+}
+.lo_form .strong_low .low {
+  background-color: #ff3600;
+}
+.lo_form .strong_mid .low {
+  background-color: #ff3600;
+}
+.lo_form .strong_mid .mid {
+  background-color: #ffc000;
+}
+.lo_form .strong_hig .low {
+  background-color: #ff3600;
+}
+.lo_form .strong_hig .mid {
+  background-color: #ffc000;
+}
+.lo_form .strong_hig .hig {
+  background-color: #71b300;
+}
+.lo_form a.lo_sub {
+  color: white;
+  text-align: center;
+  background-color: #f19108;
+  line-height: 50px;
+  height: 50px;
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.lo_form span.argeement {
+  line-height: 12px;
+  font-weight: bold;
+  color: red;
+  font-family: "microsoft yahei";
+}
+.lo_form img {
+  width: 70px;
+  height: 30px;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+.lo_form p {
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  color: #999;
+}
+.lo_form p input {
+  height: 13px;
+  width: 13px;
+}
+.lo_form p a {
+  color: #999;
+}
+.lo_form p a.tologin {
+  color: #f19108;
+}
+.lo_form p span {
+  color: #666;
+}
+.lo_form p span.lo_err {
+  color: red;
+  font-size: 12px;
+  float: right;
+  font-family: "microsoft yahei";
+}
+.lo_form p span.lo_error {
+  font-size: 14px;
+  color: #999;
+  float: right;
+  font-family: "microsoft yahei";
+}
+
+#lo_foot {
+  background: white;
+}
+#lo_foot .lo_foot_mid {
+  background-color: #463b7f;
+}
+#lo_foot .lo_foot_mid ul {
+  height: 39px;
+}
+#lo_foot .lo_foot_mid li {
+  padding-left: 105px;
+  font: 14px/39px "microsoft yahei";
+  float: left;
+  color: white;
+}
+#lo_foot .lo_foot_mid span {
+  background: url(../image/foot-mid.png) no-repeat;
+  display: inline-block;
+  width: 27px;
+  height: 23px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.lo_foot_top {
+  padding: 21px 0 25px 10px;
+  position: relative;
+}
+.lo_foot_top ul {
+  width: 172px;
+  height: 138px;
+  float: left;
+}
+.lo_foot_top .lastul {
+  width: 336px;
+}
+.lo_foot_top .lastul a {
+  padding-right: 65px;
+}
+.lo_foot_top li {
+  font-family: "microsoft yahei";
+  line-height: 21px;
+  height: 21px;
+  display: block;
+  color: #000000;
+}
+.lo_foot_top .first {
+  padding: 4px 0 8px;
+  font-weight: bold;
+}
+.lo_foot_top a {
+  color: #999;
+  font-family: inherit;
+}
+.lo_foot_top .two {
+  height: 42px;
+  line-height: 16px;
+}
+.lo_foot_top .foot_ewm {
+  height: 136px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.lo_foot_top .foot_ewm dt {
+  padding: 0 0 5px;
+  color: #333;
+  font-family: "microsoft yahei";
+  text-align: center;
+}
+
+.lo_foot_bot {
+  padding: 27px 0 20px;
+}
+.lo_foot_bot a {
+  color: #333;
+  padding: 0 10px;
+  font-family: "microsoft yahei";
+}
+.lo_foot_bot p {
+  padding-bottom: 15px;
+  text-align: center;
+}
+.lo_foot_bot span {
+  color: #999;
+  padding: 0 10px;
+  font-family: "microsoft yahei";
+}
+.lo_foot_bot .foot_bot_end {
+  padding: 0 280px;
+  width: 640px;
+}
+.lo_foot_bot .foot_bot_end a {
+  float: left;
+}
+.lo_foot_bot .foot_bot_end a img {
+  width: 108px;
+  height: 40px;
+}
+
+/*# sourceMappingURL=other.css.map */

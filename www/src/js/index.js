@@ -4,6 +4,7 @@ $(".ad>input").click(function () {
 	$(this).parent().hide();
 })
 
+$(".login").attr("a",0);
 //轮播
 var $index=0;
 var $timer=null;
@@ -104,9 +105,23 @@ $(function () {
 			$(".auction_right>ul").append(str);
 		}
 		$(".auction img").attr("src",json.auctions.img1);
-		
-		
-		
+		$(".mall>.strickout em").html(json.mall.num);
+		for (var i = 0; i < $(".mall_box").length; i++) {
+			$(".mall_box").eq(i).find("span").eq(0).html(json.mall.content[i].a1).end().eq(1).html(json.mall.content[i].b2);
+			$(".mall_box").eq(i).find(".more").eq(0).html(json.mall.content[i].a3);
+			for (var j = 0; j < $(".mall_box").eq(i).find("img").length; j++) {
+				$(".mall_box").eq(i).find("img").eq(j).attr("src",json.mall.content[i].img[j]);
+			}
+			$(".mall_box").eq(i).find("p").html(json.mall.content[i].b1);
+			for (var k = 0; k < $(".mall_box").eq(i).find(".info-1").length; k++) {
+				$(".mall_box").eq(i).find(".info-1").eq(k).html(json.mall.content[i].info1[k]);
+				$(".mall_box").eq(i).find(".info-2").eq(k).html(json.mall.content[i].info2[k]);
+			}
+			for (var l = 0; l < json.mall.content[i].a2.length; l++) {
+				str='<a href="javascript:void(0);">'+json.mall.content[i].a2[l]+'</a>';
+				$(".mall_box>h3").eq(i).append(str);
+			}
+		}
 	}).done(function () {
 		for (var i = 0; i <= 4; i++) {
 			$(".likebox>a").eq(i).css({left:(i*230+20)+"px",display:"block"});
@@ -148,8 +163,7 @@ $(function () {
 })
 var $likenum=0;
 function likebox (flag,obj) {
-	$(".left-side,.right-side").prop({disabled: true
-});
+	$(".left-side,.right-side").prop({disabled: true});
 	if (flag) {
 		$likenum++;
 		if ($likenum==16) {
@@ -216,7 +230,59 @@ function getTime (str) {
 		return "已到期！";
 	}
 }
-//		for (var i = 0; i < json.hotsearch.length; i++) {
-//			str='<a href="javascript:void(0);">'+json.hotsearch[i]+'</a>';
-//			$(".hot_search").append(str);
-//		}
+$(function() {
+	flag = 0;
+	$(".rightbar>li").hover(
+		function() {
+			$(this).children().addClass("hover");
+		},
+		function() {
+			$(this).children().removeClass("hover");
+		}
+	).last().click(function() {
+		flag = 1;
+		$("html,body").stop().animate({
+			scrollTop: 0
+		}, 600, function() {
+			flag = 0;
+		})
+	}).end().not(":last").on("click", function() {
+		var $index = $(this).index() + 2;
+		flag = 1;
+		$(".rightbar span").removeClass("active").eq($index - 2).addClass("active");
+		$("html,body").stop().animate({
+			scrollTop: $(".louti").eq($index).offset().top
+		}, 600, function() {
+			flag = 0;
+		});
+	})
+	$(".top").hover(
+		function () {
+			$(this).css("background-position-y","-108px");
+		},
+		function () {
+			$(this).css("background-position-y","-76px");
+		}
+	)
+	$(window).scroll(function() {
+		var $h = $(this).scrollTop();
+		var $div = $(".louti");
+		if($h > ($div.eq(2).offset().top - $div.eq(2).height() / 4)) {
+			$(".rightbar>li").not(".top").css("visibility","visible");
+			$(".rightbar").stop().fadeIn(600);
+			for(var i = 0; i < $div.length - 2; i++) {
+				var ceil = $div.eq(i + 2).height() / 2 + $div.eq(i + 1).offset().top;
+				var floor = $div.eq(i + 2).height() / 2 + $div.eq(i+2).offset().top;
+				if($h > ceil && $h <= floor && flag == 0) {
+					$(".rightbar span").removeClass("active").eq(i).addClass("active");
+				}
+			}
+			if ($h>$(".like").offset().top) {
+				$(".rightbar>li").not(".top").css("visibility","hidden");
+			}
+		} else {
+			$(".rightbar>li,.rightbar a").prop({disabled: true});
+			$(".rightbar").stop().fadeOut(600);
+		}
+	})
+})

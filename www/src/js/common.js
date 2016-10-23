@@ -1,6 +1,13 @@
 var timer=null;
 
-
+$(".login").click(function () {
+	if ($(this).attr("a")) {
+		window.location.href="login.html";
+	} else{
+		window.location.href="html/login.html";
+	}
+	
+})
 
 //head_nav
 $(".more:eq(1),.khfw").hover(

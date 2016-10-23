@@ -9,7 +9,7 @@
 .banner{
     margin-bottom: 50px;
     .background{
-        height: 400px;width: 100%;float: left;position: relative;
+        height: 400px;width: 100%;float: left;position: relative;z-index: -1;
         div{
             position: absolute;display: none;height: 100%;width: 100%;
         }
@@ -21,13 +21,13 @@
         padding-left: 180px;position: relative;cursor: pointer;
     }
     .ban_bottom{
-        padding-left: 180px;
+        padding-left: 180px;height: 160px;
         img{
             margin: 12px 0 0 10px;float: left;cursor: pointer;
         }
     }
     .button{
-        position: absolute;left: 555px;bottom: 10px;overflow: hidden;background-color: rgba(0,0,0,0.2);@include borcir(7px);
+        position: absolute;left: 555px;bottom: 10px;overflow: hidden;background-color: black;@include borcir(7px);opacity: 0.75;filter: alpha(opacity=75);
         li{
             width: 10px;height: 10px;float: left;background-color: white;margin: 2px 5px;@include borcir;
         }
@@ -99,7 +99,7 @@
     }    
 }
 .global_right{
-    padding-top: 25px;width: 180px;float: right;
+    padding-top: 25px;width: 180px;float: right;height: 655px;
     >a{
         padding: 13px 0;display: block;text-align: right;font-family:"microsoft yahei"; color: black;
         &:hover{
@@ -193,7 +193,7 @@
     }
 } 
 .sale_bott{
-    padding-bottom: 27px;overflow: hidden;
+    padding-bottom: 27px;overflow: hidden;height: 194px;
     li{
         float: left;margin-left: 24px;padding-top: 40px;
     }
@@ -310,13 +310,13 @@
             display: block;position: absolute;left: 0px;top: 0px;width: 100%;height: 100%;z-index: 2;
         }
         div{
-            position: absolute;left: 115px;bottom: 15px;background-color: rgba(1,1,1,0.05);padding-top: 20px;width: 247px;height: 65px;text-align: center;color: $fontC-deep;
+            position: absolute;left: 115px;bottom: 15px;background-color: white;padding-top: 20px;width: 247px;height: 65px;text-align: center;color: $fontC-deep;opacity: 0.85;filter: alpha(opacity=85);
         }
         p{
             font: 14px/20px "Microsoft Yahei";
         }
         span{
-            font-size: $fontS-x;
+            font-size: $fontS-x;font-family: tahoma "microsoft yahei";
         }
     }
     .mall_box_right{
@@ -380,3 +380,204 @@
     
     
 }
+.rightbar{
+    position: fixed;top: 25%;right: 10px;display: none;
+    li{
+        opacity: 0.75;filter: alpha(opacity=75);background-color: white;
+    }
+    a{
+        width: 75px;height: 30px;display: block;color: black;font: 12px "microsoft yahei";text-decoration: none;line-height: 30px;position: relative;background-color: white;
+        &:hover span{
+            background-color: white;z-index: 2;display: block;
+        }
+    }            
+    span {
+        display: none;position: absolute;width: 75px;height: 30px;background-color: white;z-index: -1;left: 0px;top: 0px;color: $fontC-aHover-red-l;font-size: 14px;
+    }
+    span.active{
+        z-index: 2;@include align(27px);border-bottom: 3px solid black;font-weight: bold;
+    }           
+    .top{
+        background:transparent url(../image/ico_index.png) no-repeat -251px -76px;width: 75px;height: 30px;cursor: pointer;
+        
+    }
+}
+
+#login{
+    background:#fdf8f4 url(../image/login_01.jpg) no-repeat center top;
+}            
+.log_top{
+    background-color: black;
+    .log_tops{
+        text-align: right;@extend %bigbox;height: 70px;
+        img{
+            float: left;
+        }
+        a{
+            padding: 0 10px;color: $fontC-light;line-height: 70px;
+            &:hover{
+                color: #c69c6d;
+            }
+        }
+    }
+}
+.log_center{
+    @extend %bigbox;height: 780px;
+    form{
+        margin-top: 110px;padding: 30px 35px;float: right;width: 310px;background-color: white;
+    }
+    #lo_yzm{
+        width: 115px;
+    }
+    
+}
+.lo_form{
+    input{
+        width: 298px;
+        height: 20px;
+        line-height: 20px;
+        padding: 10px 5px;
+        border: 1px solid #dedede;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: 'microsoft yahei';
+        vertical-align: middle;
+        color: $fontC-deep;
+    }
+    .strong{
+        display: inline-block;visibility: hidden;margin-left: 50px;height:30px;line-height: 30px;
+        .low,.mid,.hig{width: 50px;height: 14px;display: inline-block;background-color: #D6D6D6;line-height: 12px;text-align: center;margin-right: 5px;
+        }
+    }
+    .strong_low{
+        .low{background-color:#ff3600;}
+    }
+    .strong_mid{
+        .low{background-color:#ff3600;}
+        .mid{background-color: #ffc000;}
+    }
+    .strong_hig{
+        .low{background-color:#ff3600;}
+        .mid{background-color: #ffc000;}
+        .hig{background-color: #71b300;}
+    }
+    a.lo_sub{
+        color: white;text-align: center;background-color: #f19108;@include align(50px);font-weight: bold;margin-top: 10px;font-size: 18px;
+    }
+    span.argeement{
+        line-height: 12px;font-weight: bold;color: red;font-family: "microsoft yahei";
+    }
+    img{
+            width: 70px;height: 30px;display: inline-block;margin: 0 10px;vertical-align: middle;
+    }
+    p{
+        @include align(40px);color: $fontC-light;
+        input{
+            height: 13px;width: 13px;
+        }
+        
+        a{
+            color: $fontC-light;
+        }
+        a.tologin{
+            color: #f19108;
+        }
+        span{
+            color: $fontC-middle;
+        }
+        span.lo_err{
+            color: red;font-size: 12px;float: right;font-family: "microsoft yahei";
+        }
+        span.lo_error{
+            font-size: 14px;color: $fontC-light;float: right;font-family: "microsoft yahei";
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#lo_foot{
+    background: white;
+    .lo_foot_mid{
+        background-color: $fontC-aHover-blue;
+        ul{
+            @extend %bigbox;height: 39px;
+        }
+        li{
+            padding-left: 105px;font: 14px/39px "microsoft yahei";float: left;color: white;
+        }
+        span{
+            background: url(../image/foot-mid.png) no-repeat;display: inline-block;width: 27px;height: 23px;vertical-align: middle;margin-right: 5px;
+        }
+    }
+}
+.lo_foot_top{
+    @extend %bigbox;padding: 21px 0 25px 10px;position: relative;
+    ul{
+        width: 172px;height: 138px;float: left;
+    }
+    .lastul{
+        width: 336px;
+        a{
+            padding-right: 65px;
+        }
+    }
+    li{
+        font-family: "microsoft yahei";@include align(21px);color: #000000;@extend %aHover;
+        
+    }
+    .first{
+        padding: 4px 0 8px;font-weight: bold;
+    }
+    a{
+        color: $fontC-light;font-family: inherit;
+    }
+    .two{
+        height: 42px;line-height: 16px;
+    }
+    .foot_ewm{
+        height: 136px;position: absolute;right: 0px;bottom: 0px;
+        dt{
+            padding:0 0 5px;color: $fontC-deep;font-family: "microsoft yahei";text-align: center;
+        }
+    }
+}
+.lo_foot_bot{
+    padding: 27px 0 20px;
+    a{
+        color: $fontC-deep;padding: 0 10px;font-family: "microsoft yahei";
+    }
+    p{
+        @extend %aHover;padding-bottom: 15px;@extend %bigbox;text-align: center;
+    }
+    span{
+        color: $fontC-light;padding: 0 10px;font-family: "microsoft yahei";
+    }
+    .foot_bot_end{
+        padding: 0 280px;width: 640px;
+        a{
+            float: left;
+            img{
+                width: 108px;height: 40px;
+            }
+        }
+    }
+    
+    
+}            
+            
+            
+            
+            
