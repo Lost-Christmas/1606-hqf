@@ -1,4 +1,165 @@
 {
+	"banbottom":["image/ban_bot1.jpg","image/ban_bot2.jpg","image/ban_bot3.jpg"],
+	"globalleftA":["image/g1.jpg","image/g2.jpg"],
+	"globalleftLi":[
+		{
+			"img":"image/g-1.jpg",
+			"em":"-32px -206px",
+			"p":"香港 免税直供",
+			"a":"GUCCI/古驰 女士粉色真皮手提包 421890",
+			"span":"￥17,304"
+		},
+		{
+			"img":"image/g-2.jpg",
+			"em":"-94px -206px",
+			"p":"日本 免税直供",
+			"a":"GYMNAST 日本制gymnast plus高度可调可",
+			"span":"￥ 904"
+		},
+		{
+			"img":"image/g-3.jpg",
+			"em":"-125px -206px",
+			"p":"欧洲 免税直供",
+			"a":"MCM/MCM 女士 PVC 金属logo装饰 印花 双肩",
+			"span":"￥ 4,580"
+		},
+		{
+			"img":"image/g-4.png",
+			"em":"-63px -206px",
+			"p":"美国 免税直供",
+			"a":"Master Dynamic MH30 芭莎等各大杂志热捧 真皮",
+			"span":"￥ 2,798"
+		},
+		{
+			"img":"image/g-5.jpg",
+			"em":"-32px 0px",
+			"p":"新西兰 免税直供",
+			"a":"Nu-lax/乐康膏 天然有机果蔬膳食纤维排毒养颜润",
+			"span":"￥ 199"
+		}
+	],
+	"globalRightWag":[
+		{
+			"img":"image/gr-1.jpg",
+			"span":"2折起",
+			"a":"大牌秋冬鞋靴"
+		},
+		{
+			"img":"image/gr-2.jpg",
+			"span":"",
+			"a":"EONE季中折扣"
+		},
+		{
+			"img":"image/gr-3.jpg",
+			"span":"",
+			"a":"男装季中折扣"
+		},
+		{
+			"img":"image/gr-4.png",
+			"span":"满减",
+			"a":"澳洲UGG专场"
+		}
+	],
+	"saleBottWag":[
+		{
+			"img":"image/sb-1.jpg",
+			"span":"5折起",
+			"a":"<年轻时尚>腕表专场"
+		},
+		{
+			"img":"image/sb-2.jpg",
+			"span":"3折起",
+			"a":"<魅力工艺>男装专场"
+		},
+		{
+			"img":"image/sb-3.jpg",
+			"span":"3折起",
+			"a":"<充满活力>包袋专场"
+		},
+		{
+			"img":"image/sb-4.jpg",
+			"span":"2折起",
+			"a":"<简洁大方>女装上新"
+		},
+		{
+			"img":"image/sb-5.jpg",
+			"span":"全场特价",
+			"a":"<高贵奢华>首饰专场"
+		},
+		{
+			"img":"image/sb-6.jpg",
+			"span":"5折起",
+			"a":"<精心设计>眼镜专场"
+		}
+	],
+	"saleMidLeft":{
+		"img1":"image/sml-1.jpg",
+		"img2":"image/sml-2.jpg",
+		"sp":"6折起"
+	},
+	"saleMidCenter":[
+		{
+			"img":"image/smc-1.jpg",
+			"a":"<运动休闲>潮牌男女装专场",
+			"b":"6折起"
+		},
+		{
+			"img":"image/smc-2.jpg",
+			"a":"<绅士魅力>Armani男女鞋专场",
+			"b":"4折起"
+		}
+	],
+	"saleMidRight":[
+		{
+			"img":"image/smr-1.jpg",
+			"a":"CLORIS吊坠",
+			"b":"¥2,124"
+		},
+		{
+			"img":"image/smr-2.jpg",
+			"a":"MARJA KURKI围巾披肩",
+			"b":"¥1,180"
+		}
+	],
+	"auctions":{
+		"img1":"image/auctionimg.jpg",
+		"num":[34092,2739],
+		"info":[
+			"10月19日OMEGA/欧米茄海马系列女士机械腕表",
+			"10月20日CARTIER(卡地亚) 18k黄金LOVE系列宽版三钻戒指",
+			"10月21日GUCCI(古驰) #藏蓝色经典LOGO图案PVC斜挎包",
+			"10月22日法国 白兰地 XO 7.5L 超大瓶装"
+		]
+	},
+	"mall":{
+		"num":1591
+		
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	"lasttime":"2016-11-11",
 	"bottomlunbo":[
 		{

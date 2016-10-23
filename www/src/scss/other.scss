@@ -118,7 +118,7 @@
         }
     }
     .mid_left{
-        position: absolute;left: 0px;top: 21px;width: 191px;height: 19px;text-align: center;display: block;background-color:#f5f5f5 ;
+        position: absolute;left: 0px;top: 21px;width: 191px;height: 19px;text-align: center;display: block;background-color:#f5f5f5 ;z-index: 2;
     }
     
 }
@@ -140,7 +140,7 @@
             display: block;height: 100%;width: 100%;position: absolute;left: 0px;top: 0px;z-index: 2;
         }
         .info{
-            display: block;position: absolute;width: 140px;height: 176px;text-align: center;padding-top: 10px;top: 30%;left: 50px;
+            display: block;position: absolute;width: 140px;height: 176px;text-align: center;padding-top: 10px;top: 30%;left: 50px;background-color: white;
             img{
                 width: 90px;height: 90px;margin: 0 auto;margin-bottom: 8px;
             }
@@ -157,7 +157,7 @@
     >div{
         width: 375px;height: 189px;position: relative;
         .info{
-            position: absolute;left: 90px;bottom: 15px;width: 200px;height: 51px;padding-top: 9px;text-align: center;background-color: rgba(1,1,1,0.05);
+            position: absolute;left: 90px;bottom: 15px;width: 200px;height: 51px;padding-top: 9px;text-align: center;background-color: white;opacity: 0.75;filter: alpha(opacity=75);
         }
         .info_1{
             font-family: "microsoft yahei";
@@ -257,7 +257,7 @@
         padding-bottom: 36px;
     }
     img{
-        position: absolute;left: 0px;top: 0px;
+        position: absolute;left: 0px;top: 0px;width: 178px;height: 88px;
     }
     .mess{
         font: 14px "microsoft yahei";@include align(28px);display: block;color: #5d5d5d;text-align: center;
@@ -350,10 +350,10 @@
     .like_box{
         height: 215px;position: relative;padding: 0 25px;overflow: hidden;
         .likebox{
-            position: relative;width: 100%;height: 100%;overflow: hidden;top: 0px;
+            position: relative;height: 100%;top: 0px;overflow: hidden;
         }
         a{
-            width: 190px;height: 215px;text-align: center;position: absolute;top: 0px;
+            width: 190px;height: 215px;text-align: center;position: absolute;top: 0px;display: none;float: left;left: 0px;
         }
         img{
             width: 160px;height: 160px;margin: 0 auto;margin-bottom: 25px;
