@@ -1,10 +1,11 @@
+
 var $timer2=null;
 //广告栏
 $(".ad>input").click(function () {
 	$(this).parent().hide();
 })
 
-$(".login").attr("a",0);
+$(".login,.logon").attr("a",0);
 //轮播
 var $index=0;
 var $timer=null;
@@ -52,7 +53,7 @@ function time () {
 	lunbo($index);
 }
 
-
+//json数据
 $(function () {
 	var json=[];
 	var str="";
@@ -161,6 +162,8 @@ $(function () {
 		
 	})
 })
+
+//底部轮播
 var $likenum=0;
 function likebox (flag,obj) {
 	$(".left-side,.right-side").prop({disabled: true});
@@ -206,7 +209,7 @@ $(".like_box").on("click",".right-side",function () {
 	likebox(0,$(".likebox>a"));
 })
 
-
+//倒计时
 function getTime (str) {
 	var $Totime=Date.parse(str);
 	var today=new Date();
@@ -230,6 +233,8 @@ function getTime (str) {
 		return "已到期！";
 	}
 }
+
+//楼梯
 $(function() {
 	flag = 0;
 	$(".rightbar>li").hover(
@@ -285,4 +290,9 @@ $(function() {
 			$(".rightbar").stop().fadeOut(600);
 		}
 	})
+})
+
+//商品详情
+$(".global_left>ul>li").eq(2).click(function () {
+	window.location.href="html/firstgoods.html"
 })

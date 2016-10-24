@@ -1,3 +1,4 @@
+@charset "UTF-8";
 input {
   outline: none;
   border: none;
@@ -27,11 +28,11 @@ i, em {
   font-style: normal;
 }
 
-.ad, .banner .banners, .global, .sale, .auction, .mall, .like, .log_top .log_tops, .log_center, #lo_foot .lo_foot_mid ul, .lo_foot_top, .lo_foot_bot p {
+.ad, .banner .banners, .global, .sale, .auction, .mall, .like, .log_top .log_tops, .log_center, #lo_foot .lo_foot_mid ul, .lo_foot_top, .lo_foot_bot p, .firstgood img, .firstgoods .firstgoods_content {
   width: 1200px;
   margin: 0 auto;
 }
-.ad:after, .banner .banners:after, .global:after, .sale:after, .auction:after, .mall:after, .like:after, .log_top .log_tops:after, .log_center:after, #lo_foot .lo_foot_mid ul:after, .lo_foot_top:after, .lo_foot_bot p:after {
+.ad:after, .banner .banners:after, .global:after, .sale:after, .auction:after, .mall:after, .like:after, .log_top .log_tops:after, .log_center:after, #lo_foot .lo_foot_mid ul:after, .lo_foot_top:after, .lo_foot_bot p:after, .firstgood img:after, .firstgoods .firstgoods_content:after {
   content: ".";
   display: block;
   clear: both;
@@ -806,6 +807,7 @@ i, em {
 
 .log_center {
   height: 780px;
+  position: relative;
 }
 .log_center form {
   margin-top: 110px;
@@ -813,9 +815,36 @@ i, em {
   float: right;
   width: 310px;
   background-color: white;
+  display: none;
 }
 .log_center #lo_yzm {
   width: 115px;
+}
+.log_center .log_tab {
+  position: absolute;
+  right: 86px;
+  top: 110px;
+  overflow: hidden;
+  width: 201px;
+  border: 1px solid #ddd;
+  background-color: #ddd;
+}
+.log_center .log_tab a {
+  width: 100px;
+  height: 30px;
+  float: left;
+  background-color: white;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-family: "microsoft yahei";
+  color: #666;
+}
+.log_center .log_tab a.active {
+  background-color: white;
+  color: #f19108;
+  background-color: #F5F5F5;
 }
 
 .lo_form input {
@@ -831,14 +860,16 @@ i, em {
   color: #333;
 }
 .lo_form .strong {
+  position: absolute;
   display: inline-block;
   visibility: hidden;
-  margin-left: 50px;
   height: 30px;
   line-height: 30px;
+  left: 45px;
+  top: 5px;
 }
 .lo_form .strong .low, .lo_form .strong .mid, .lo_form .strong .hig {
-  width: 50px;
+  width: 30px;
   height: 14px;
   display: inline-block;
   background-color: #D6D6D6;
@@ -918,6 +949,82 @@ i, em {
   color: #999;
   float: right;
   font-family: "microsoft yahei";
+}
+
+.li_form {
+  padding-top: 40px !important;
+}
+.li_form .li_error {
+  display: none;
+  height: 20px;
+  border: 1px solid #ffac76;
+  background: #ffffcf url(../image/log_error.png) no-repeat left center;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  line-height: 25px;
+  color: #ff0200;
+}
+.li_form #li_pass, .li_form #li_txt {
+  width: 298px;
+  height: 20px;
+  line-height: 20px;
+  padding: 14px 5px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'microsoft yahei';
+}
+.li_form p {
+  position: relative;
+  margin-bottom: 15px;
+}
+.li_form p span {
+  width: 15px;
+  height: 17px;
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  background: url(../image/login.png) no-repeat;
+}
+.li_form p .li_check {
+  vertical-align: middle;
+}
+.li_form p .li_float {
+  float: right;
+  color: #333;
+}
+.li_form p .li_float:hover {
+  color: #9c003f;
+}
+.li_form p em {
+  position: absolute;
+  left: 7px;
+  top: 18px;
+  color: #999;
+}
+.li_form .li_img {
+  height: 60px;
+}
+.li_form .li_img a {
+  float: left;
+  height: 20px;
+  line-height: 20px;
+}
+.li_form .li_img img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.li_form > a {
+  width: 100%;
+  background-color: #f19108;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  display: block;
+  margin-bottom: 15px;
 }
 
 #lo_foot {
@@ -1020,4 +1127,104 @@ i, em {
   height: 40px;
 }
 
-/*# sourceMappingURL=other.css.map */
+#mark {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  display: none;
+}
+#mark .mark {
+  width: 492px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  z-index: 20;
+  height: 185px;
+  margin-top: -93px;
+  margin-left: -246px;
+  background-color: white;
+  text-align: center;
+}
+#mark h3 {
+  line-height: 40px;
+  height: 40px;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #F5F5F5;
+  margin-bottom: 50px;
+}
+#mark a {
+  background-color: #FF2832;
+  float: right;
+  line-height: 30px;
+  height: 30px;
+  display: block;
+  padding: 0 10px;
+  color: white;
+  margin-right: 30px;
+  font-size: 16px;
+}
+#mark #colormark {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #000000;
+  height: 100%;
+  left: 0;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: block;
+}
+
+.firstgood {
+  padding: 30px 0px 200px;
+  background-color: #ededed;
+}
+
+.firstgoods {
+  background-color: #ededed;
+}
+
+#smallbox {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: 100px;
+  top: 0px;
+  background-image: url(鏄熼檯绌胯秺.jpg);
+  background-size: cover;
+}
+
+#small {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 80px;
+  height: 80px;
+  display: none;
+}
+
+#bigbox {
+  width: 320px;
+  height: 320px;
+  position: relative;
+  left: 400px;
+  top: -200px;
+  overflow: hidden;
+  display: none;
+}
+
+#big {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  background: url(鏄熼檯绌胯秺.jpg) no-repeat center center;
+  display: inherit;
+}

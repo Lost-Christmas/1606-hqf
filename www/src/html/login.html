@@ -7,6 +7,13 @@
 		<link rel="stylesheet" type="text/css" href="../css/other.css"/>
 	</head>
 	<body id="login">
+		<div id="mark">
+			<span id="colormark"></span>
+			<div class="mark">
+				<h3>恭喜您，注册 成功！</h3>
+				<p><a class="mark_key" href="javascript:void(0);">知道了,我想留在原地！</a><a class="mark_key getlogin" href="javascript:void(0);">点此！自动登录并跳转首页</a></p>
+			</div>
+		</div>
 		<div class="log_top">
 			<div class="log_tops">
 				<img src="../image/login-logo.png"/>
@@ -16,19 +23,30 @@
 			</div>
 		</div>
 		<div class="log_center">
+				<p class="log_tab"><a style="margin-right: 1px;" href="javascript:void(0);">登陆</a><a href="javascript:void(0);">注册</a></p>
+				<form class="li_form" action="" method="post">
+					<div class="li_error"></div>
+					<p><em>用户名</em><input type="text" id="li_txt" value=""/><span style="background-position-y: 1px;background-position-x: 0px;"></span></p>
+					<p><em>密码</em><input type="password" name=""  id="li_pass" /><span style="background-position-y: -20px;background-position-x: 0px;"></span></p>
+					<p><input type="checkbox" name="" class="li_check" value="" checked="checked"/>记住账号</p>
+					<a class="li_sub" href="javascript:void(0);">立即登录</a>
+					<p>使用合作网站账号登录</p>
+					<p class="li_img"><a href="javascript:void(0);"><img src="../image/qq.jpg"/></a><a href="javascript:void(0);"><img src="../image/xunLei.png"/></a></p>
+					<p>还不是寺库会员？<a class="tologon" style="color: #f19108;" href="javascript:void(0);">免费注册</a><a class="li_float" href="javascript:void(0);">忘记密码？</a></p>
+				</form>
 				<form class="lo_form" action="" method="post">
 					<p><span class="lo_tip">用户名</span><span class="lo_error lo_err">请输入您的手机号</span></p>
 					<input type="text" id="lo_txt" value="" />
-					<p><span class="lo_tip">验证码(不区分大小写)<span class="lo_err"></span></p>
-					<input type="text" id="lo_yzm" value="" /><img src=""/><a style="color: #333;line-height: 30px;" href="javascript:void(0);">换一换</a>
-					<p><span class="lo_tip">密码</span><a href="javascript:void(0);" class="strong"><span class="low">低</span><span class="mid">中</span><span class="hig">高</span></a><span class="lo_err"></span></p>
+					<p class="logon_yzm1"><span class="lo_tip">验证码(不区分大小写)<span class="lo_err"></span></p>
+					<p class="logon_yzm2"><input type="text" id="lo_yzm" value="" /><img id="lo_yzmimg" src="../image/simple(1).png"/><a id="lo_yzma" style="color: #333;line-height: 30px;" href="javascript:void(0);">换一换</a></p>
+					<p style="position: relative;"><span class="lo_tip">密码</span><a href="javascript:void(0);" class="strong"><span class="low">低</span><span class="mid">中</span><span class="hig">高</span></a><span class="lo_err"></span></p>
 					<input type="password" id="lo_pass" value="" />
 					<p><span class="lo_tip">确认密码</span><span class="lo_err"></span></p>
 					<input type="password" id="lo_repass" value="" />
 					<p><input type="checkbox" name="" id="lo_check" value="" /><span class="lo_tip">贵宾邀请码</span><span class="lo_err"></span></p>
 					<input type="text" id="lo_vip" value="" />
 					<a class="lo_sub" href="javascript:void(0);">立即注册</a>
-					<p><input type="checkbox" name="" id="lo_argee" value="" /><a href="javascript:void(0);">我已阅读并同意《寺库网用户注册协议》</a></p>
+					<p><input type="checkbox" name="" id="lo_argee" value="" checked="checked"/><a href="javascript:void(0);">我已阅读并同意《寺库网用户注册协议》</a></p>
 					<span class="lo_err argeement">请接受服务条款</span>
 					<p>已经是寺库会员？<a class="tologin" href="javascript:void(0);">立即登录</a></p>
 				</form>
@@ -100,7 +118,7 @@
 
 		
 		<script src="../js/lib/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/lib/cookie.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="../js/lib/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/login.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

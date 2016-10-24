@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/lib/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/other.css"/>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div class="firstgoods">
+			<div class="goods_content">
+				<h3><a href="../index.html">首页</a>&gt;<a href="javascript:void(0);">营养保健</a>&gt;<a href="javascript:void(0);">营养成分</a>&gt;<a href="javascript:void(0);">乐康膏</a>&gt;<a href="javascript:void(0);">Nu-lax/乐康膏 天然有机果蔬膳食纤维排毒养颜润肠通宿便 500g 9310214000064</a>
+					<span>商品编码：15564343</span>
+				</h3>
+				<div class="g_left">
+					<div class="g_left_top">
+						<div class="littleimgbox"></div>
+						<div id="smallbox">
+							<div id="small"></div>
+						</div>
+						<div id="bigbox">
+							<div id="big"></div>
+						</div>
+					</div>
+					<ul class="g_left_bot">
+						<li><span></span><a href="javascript:void(0);">正品保障</a></li>
+						<li><span></span><a href="javascript:void(0);">七天退换</a></li>
+						<li><span></span><a href="javascript:void(0);">权威质检</a></li>
+						<li><span></span><a href="javascript:void(0);">分享</a></li>
+						<li><span></span><a href="javascript:void(0);">收藏商品</a></li>
+					</ul>
+				</div>
+				<div class="g_right">
+					<span></span>
+					<div class="g_right_mid">
+						<p><span class="g_tip"></span><span></span></p>
+						<p><span class="g_tip"></span><span></span></p>
+						<p><span class="g_tip"></span><span></span></p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="firstgood">
+			<img src="../image/shop-1.jpg"/>
+		</div>
+		<div id="foot"></div>
+		<script src="../js/lib/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/lib/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#header').load('head.html');
+				$.getScript('../js/firstgoods.js');
+				$('#foot').load('foot.html');
+				$.getScript('../js/common.js');
+			})
+		</script>
+	</body>
+</html>

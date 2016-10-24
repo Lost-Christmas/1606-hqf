@@ -1,13 +1,34 @@
 var timer=null;
 
-$(".login").click(function () {
-	if ($(this).attr("a")) {
-		window.location.href="login.html";
-	} else{
-		window.location.href="html/login.html";
-	}
+if ($.cookie("login")=="true") {
+	$.cookie("login","false",{ expires: 7 ,path:"/"});
+	$(".login").html($.parseJSON($.cookie("user")).name);
+	$(".logon").html("退出").click(function () {
+		if ($(this).attr("a")) {
+			window.location.href="../index.html";
+		} else{
+			window.location.href="index.html";
+		}
+	});
 	
-})
+}else{
+	$(".login").click(function () {
+		$.cookie("log","in");
+		if ($(this).attr("a")) {
+			window.location.href="login.html";
+		} else{
+			window.location.href="html/login.html";
+		}
+	})
+	$(".logon").click(function () {
+		$.cookie("log","on");
+		if ($(this).attr("a")) {
+			window.location.href="login.html";
+		} else{
+			window.location.href="html/login.html";
+		}
+	})
+}
 
 //head_nav
 $(".more:eq(1),.khfw").hover(
@@ -23,7 +44,25 @@ $(".more:eq(1),.khfw").hover(
 $(function () {
 	var json=[];
 	var str="";
-	$.getJSON("json/common.json",function (date) {
+	var address=""
+	if ($(".login").attr("a")) {
+		address="../json/common.json";
+		$(".logo_left img").eq(0).attr("src","../image/secoo_logo.png").end().eq(1).attr("src","../image/ad.gif")
+		$(".foot_ewm img").eq(0).attr("src","../image/app_ewm.jpg").end().eq(1).attr("src","../image/sk_ewm.jpg")
+		$(".pc>img").attr("src","../image/foot_pc.png");
+		for (var i = 0; i < $(".foot_bot_end img").length; i++) {
+			$(".foot_bot_end img").eq(i).attr("src","../image/f_0"+(i+1)+".jpg");
+		}
+	} else{
+		address="json/common.json";
+		$(".logo_left img").eq(0).attr("src","image/secoo_logo.png").end().eq(1).attr("src","image/ad.gif")
+		$(".foot_ewm img").eq(0).attr("src","image/app_ewm.jpg").end().eq(1).attr("src","image/sk_ewm.jpg")
+		$(".pc>img").attr("src","image/foot_pc.png");
+		for (var i = 0; i < $(".foot_bot_end img").length; i++) {
+			$(".foot_bot_end img").eq(i).attr("src","image/f_0"+(i+1)+".jpg");
+		}
+	}
+	$.getJSON(address,function (date) {
 		json=date;
 		//hot_search
 		for (var i = 0; i < json.hotsearch.length; i++) {
@@ -90,6 +129,7 @@ $(function () {
 				$(this).hide();
 			}
 		)
+		
 		
 	})
 })
