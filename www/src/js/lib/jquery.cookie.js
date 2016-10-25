@@ -48,7 +48,8 @@
 	}
 
 	function read(s, converter) {
-		var value = config.raw ? s : parseCookieValue(s);
+//		var value = config.raw ? s : parseCookieValue(s);
+		var value = config.raw ? (config.json ? JSON.parse(s) : s): parseCookieValue(s);
 		return $.isFunction(converter) ? converter(value) : value;
 	}
 

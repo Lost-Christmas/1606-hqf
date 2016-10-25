@@ -293,6 +293,6 @@ $(function() {
 })
 
 //商品详情
-$(".global_left>ul>li").eq(2).click(function () {
+$(".global_left>ul>li").eq(4).click(function () {
 	window.location.href="html/firstgoods.html"
 })

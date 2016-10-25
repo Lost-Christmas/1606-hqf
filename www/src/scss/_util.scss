@@ -14,3 +14,15 @@
         color: #463b7f;
     }
 }
+
+%shopcar{
+    width: 990px;margin: 0 auto;
+    &:after{
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+}
