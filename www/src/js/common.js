@@ -1,19 +1,16 @@
 var timer=null;
-
 if ($.cookie("login")=="true") {
-	$.cookie("login","false",{ expires: 7 ,path:"/"});
-	$(".login").html($.parseJSON($.cookie("user")).name);
+	$.cookie.json=true;
+//	$.cookie.raw=true;
+	$(".login").html($.cookie("user").name);
 	$(".logon").html("退出").click(function () {
-		if ($(this).attr("a")) {
-			window.location.href="../index.html";
-		} else{
-			window.location.href="index.html";
-		}
+		$.cookie.raw=true;
+		$.cookie("login","false",{ expires: 7 ,path:"/"});
+		window.location.reload();
 	});
-	
 }else{
 	$(".login").click(function () {
-		$.cookie("log","in");
+		$.cookie("log","in",{ expires: 7 ,path:"/"});
 		if ($(this).attr("a")) {
 			window.location.href="login.html";
 		} else{
@@ -21,7 +18,7 @@ if ($.cookie("login")=="true") {
 		}
 	})
 	$(".logon").click(function () {
-		$.cookie("log","on");
+		$.cookie("log","on",{ expires: 7 ,path:"/"});
 		if ($(this).attr("a")) {
 			window.location.href="login.html";
 		} else{
