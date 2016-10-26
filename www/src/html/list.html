@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>[满499减60]澳佳宝</title>
+		<link rel="stylesheet" type="text/css" href="../css/lib/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/other.css"/>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div class="list_mid">
+			<div class="list_tit">
+				<i class="l_squ"></i><i class="r_squ"></i>
+				<span>
+					<i class="l_squ"></i><i class="r_squ"></i>
+					[满499减60]澳佳宝
+				</span>
+			</div>
+			<div class="list_content"></div>
+			<div class="list_tit">
+				<i class="l_squ"></i><i class="r_squ"></i>
+				<span>
+					<i class="l_squ"></i><i class="r_squ"></i>
+					热卖售罄
+				</span>
+			</div>
+			<div class="list_sold"></div>
+		</div>
+		
+		
+		<div id="foot"></div>
+		<script src="../js/lib/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/lib/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#header').load('head.html');
+				$.getScript('../js/list.js');
+				$('#foot').load('foot.html');
+				$.getScript('../js/common.js');
+			})
+		</script>	
+	</body>
+</html>

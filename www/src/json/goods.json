@@ -8,5 +8,15 @@
 		"addr":"新西兰",
 		"time":"预计3-7个工作日内送达",
 		"tips":"本商品无质量问题不支持退换货"
+	},
+	"good2":{
+		"name":"MCM/MCM 女士 PVC 金属logo装饰 印花 双肩包 BR",
+		"link":["包袋","双肩包","MCM","MCM/MCM 女士 PVC 金属logo装饰 印花 双肩包 BR"],
+		"id":"16784051",
+		"img":["../image/good2-1.jpg","../image/good2-2.jpg","../image/good2-3.jpg","../image/good2-4.jpg","../image/good2-5.jpg"],
+		"value":"3,262",
+		"addr":"欧洲",
+		"time":"预计7-15个工作日内送达",
+		"tips":"本商品无质量问题不支持退换货"
 	}
 }

@@ -27,11 +27,11 @@ i, em {
   font-style: normal;
 }
 
-.ad, .banner .banners, .global, .sale, .auction, .mall, .like, .log_top .log_tops, .log_center, #lo_foot .lo_foot_mid ul, .lo_foot_top, .lo_foot_bot p, .firstgood img, .goods_content {
+.ad, .banner .banners, .global, .sale, .auction, .mall, .like, .log_top .log_tops, .log_center, #lo_foot .lo_foot_mid ul, .lo_foot_top, .lo_foot_bot p, .firstgood img, .goods_content, .sc_null, .list_mid {
   width: 1200px;
   margin: 0 auto;
 }
-.ad:after, .banner .banners:after, .global:after, .sale:after, .auction:after, .mall:after, .like:after, .log_top .log_tops:after, .log_center:after, #lo_foot .lo_foot_mid ul:after, .lo_foot_top:after, .lo_foot_bot p:after, .firstgood img:after, .goods_content:after {
+.ad:after, .banner .banners:after, .global:after, .sale:after, .auction:after, .mall:after, .like:after, .log_top .log_tops:after, .log_center:after, #lo_foot .lo_foot_mid ul:after, .lo_foot_top:after, .lo_foot_bot p:after, .firstgood img:after, .goods_content:after, .sc_null:after, .list_mid:after {
   content: ".";
   display: block;
   clear: both;
@@ -1199,7 +1199,7 @@ i, em {
   background-color: #ededed;
 }
 
-.firstgoods {
+.firstgoods, .secondgoods {
   background-color: #ededed;
 }
 
@@ -1453,14 +1453,14 @@ i, em {
   vertical-align: middle;
 }
 
-#firstgoods .mark {
+#firstgoods .mark, #secondgoods .mark {
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 1000;
   display: none;
 }
-#firstgoods .mark .markcon {
+#firstgoods .mark .markcon, #secondgoods .mark .markcon {
   width: 420px;
   position: relative;
   left: 50%;
@@ -1472,13 +1472,13 @@ i, em {
   background-color: white;
   padding: 5px;
 }
-#firstgoods .mark p {
+#firstgoods .mark p, #secondgoods .mark p {
   color: #463a7e;
   font: normal 16px/16px "microsoft yahei";
   text-align: center;
   overflow: hidden;
 }
-#firstgoods .mark h3 {
+#firstgoods .mark h3, #secondgoods .mark h3 {
   line-height: 40px;
   height: 40px;
   display: block;
@@ -1490,7 +1490,7 @@ i, em {
   color: white;
   padding-left: 20px;
 }
-#firstgoods .mark a {
+#firstgoods .mark a, #secondgoods .mark a {
   background-color: #FF2832;
   float: left;
   line-height: 30px;
@@ -1501,7 +1501,7 @@ i, em {
   margin-right: 30px;
   width: 130px;
 }
-#firstgoods .mark .colormark {
+#firstgoods .mark .colormark, #secondgoods .mark .colormark {
   width: 100%;
   height: 100%;
   display: block;
@@ -1589,6 +1589,7 @@ i, em {
   text-align: center;
   font-family: "microsoft yahei";
   background: #fdf0ef;
+  border-top: 1px solid #ececec;
 }
 .sc_center table .tal {
   text-align: left;
@@ -1660,4 +1661,116 @@ i, em {
   background-color: #e4e4e4;
   color: #999;
   cursor: not-allowed;
+}
+
+.sc_null {
+  background: #f6f6f6 url(../image/shopcar-bg.jpg) no-repeat center center;
+  height: 400px;
+  position: relative;
+}
+.sc_null a {
+  position: absolute;
+  left: 580px;
+  top: 200px;
+  width: 192px;
+  height: 39px;
+  line-height: 39px;
+  text-align: center;
+  color: white;
+  background-color: #e93b39;
+  display: block;
+  font-family: "microsoft yahei";
+  font-weight: bold;
+  font-size: 14px;
+}
+.sc_null a:hover {
+  background-color: #9c003f;
+}
+
+.list_mid {
+  padding-top: 35px;
+  padding-bottom: 65px;
+  overflow: hidden;
+}
+.list_mid .list_tit {
+  text-align: center;
+  background: #fff url(../image/list_bg2.jpg) repeat-x left center;
+  width: 100%;
+  height: 24px;
+  position: relative;
+}
+.list_mid .list_tit i {
+  background: url(../image/list_bg.jpg) no-repeat;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  width: 9px;
+  height: 11px;
+  margin-top: -5px;
+}
+.list_mid .list_tit .l_squ {
+  left: 0px;
+}
+.list_mid .list_tit .r_squ {
+  right: 0px;
+}
+.list_mid .list_tit span {
+  display: inline-block;
+  font: bold 20px/24px "microsoft yahei";
+  color: #666;
+  padding: 0 40px;
+  background: #fff;
+  position: relative;
+}
+
+.list_content, .list_sold {
+  padding-bottom: 85px;
+  width: 110%;
+  background: #fff;
+  overflow: hidden;
+}
+.list_content dl, .list_sold dl {
+  width: 240px;
+  float: left;
+  color: #5d5d5d;
+  padding: 15px;
+  margin: 35px 40px 0 0;
+  overflow: hidden;
+}
+.list_content dt, .list_sold dt {
+  width: 240px;
+  height: 240px;
+  background: #fff;
+  position: relative;
+}
+.list_content .list_name, .list_sold .list_name {
+  width: 100%;
+  padding-top: 40px;
+  height: 36px;
+  line-height: 19px;
+  overflow: hidden;
+}
+.list_content .list_name a, .list_sold .list_name a {
+  color: #666;
+}
+.list_content .list_name a:hover, .list_sold .list_name a:hover {
+  color: #9c003f;
+}
+.list_content .list_value, .list_sold .list_value {
+  width: 100%;
+  height: 20px;
+  padding-top: 5px;
+  overflow: hidden;
+  line-height: 20px;
+}
+.list_content .list_value span, .list_sold .list_value span {
+  color: #5d5d5d;
+  font-weight: bold;
+  font-size: 14px;
+  float: left;
+  font-family: "microsoft yahei";
+}
+
+.list_sold dt {
+  background: white url(../image/sold.png) no-repeat right top;
 }
