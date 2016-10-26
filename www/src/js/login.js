@@ -1,3 +1,4 @@
+$.cookie.json = true;
 //判断跳转的tab
 if ($.cookie("log")=="in") {
 	$(".log_tab>a").eq(0).addClass("active");
@@ -168,8 +169,6 @@ $(function () {
 			flag6=1;
 		}
 		if (flag1+flag2+flag3+flag4+flag5+flag6==6) {
-			$.cookie.json = true;
-//			$.cookie.raw=true;
         	$.cookie("user",{name:$("#lo_txt").val(),password:$("#lo_pass").val()},{ expires: 7 ,path:"/"});
         	$(".mark").show();
 		}
@@ -181,8 +180,7 @@ $(function () {
 $(function () {
 	var flag=0;
 	
-	if ($.cookie("checked")=="true") {
-		$.cookie.json=true;
+	if ($.cookie("checked")) {
 		var name=$.cookie("user").name;
 		$("#li_txt").val(name).prev().hide().end().next().css("backgroundPositionX","-19px");
 	}
@@ -200,15 +198,12 @@ $(function () {
 		$(this).css("borderColor","#ddd");
 	});
 	$(".li_sub").click(function () {
-		$.cookie.json = true;
 		var str_name=$.cookie("user").name;
 		var str_pass=$.cookie("user").password;
 		var str_check=$.cookie("checked");
 		if ($("#li_txt").val()==str_name&&$("#li_pass").val()==str_pass) {
-			$.cookie.json = true;
-			$.cookie.raw=true;
 			$.cookie("checked",$(".li_check").is(":checked"),{ expires: 7 ,path:"/"})
-			$.cookie("login","true",{ expires: 7 ,path:"/"});
+			$.cookie("login",true,{ expires: 7 ,path:"/"});
 			window.location.href="../index.html";
 		}
 	})
@@ -216,9 +211,7 @@ $(function () {
 $(".mark_key").on("click",function () {
 	$(".mark").hide();
 	if($(this).index()){
-		$.cookie.json = true;
-		$.cookie.raw=true;
-		$.cookie("login","true",{ expires: 7 ,path:"/"});
+		$.cookie("login",true,{ expires: 7 ,path:"/"});
 		window.location.href="../index.html";
 	}
 })

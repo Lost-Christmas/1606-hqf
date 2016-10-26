@@ -160,6 +160,10 @@ $(function () {
 			}
 		)
 		
+		$(".ban_bottom>img").eq(2).click(function () {
+			window.location.href="html/list.html";
+		})
+		
 	})
 })
 
@@ -295,4 +299,7 @@ $(function() {
 //商品详情
 $(".global_left>ul>li").eq(4).click(function () {
 	window.location.href="html/firstgoods.html"
+})
+$(".global_left>ul>li").eq(2).click(function () {
+	window.location.href="html/goods2.html"
 })

@@ -688,7 +688,7 @@
         @extend %bigbox;
     }
 } 
-.firstgoods{
+.firstgoods,.secondgoods{
     background-color: #ededed;
 }
 .goods_content{
@@ -882,7 +882,7 @@
         }
     }
 }
-#firstgoods{
+#firstgoods,#secondgoods{
     .mark{width:100%;height: 100%;position: fixed;z-index: 1000;display: none;
         .markcon{
             width: 420px;position: relative;left: 50%;top:50%;z-index: 20;height: 190px;margin-top: -98px;margin-left: -212px;background-color: white;padding: 5px;
@@ -1027,4 +1027,105 @@
             cursor: not-allowed;
         }
     }
+}
+.sc_null{
+    background: #f6f6f6 url(../image/shopcar-bg.jpg) no-repeat center center;height: 400px;@extend %bigbox;position: relative;
+    a{
+        position: absolute;left: 580px;top: 200px;width: 192px;height: 39px;line-height: 39px;text-align: center;color: white;background-color: $fontC-aHover-red-l;display: block;font-family: "microsoft yahei";font-weight: bold;font-size: 14px;
+        &:hover{
+            background-color: $fontC-aHover-red-d;
+        }
+    }
+}
+
+.list_mid{
+    @extend %bigbox;padding-top: 35px;padding-bottom: 65px;overflow: hidden;
+    .list_tit{
+        text-align: center;
+        background: #fff url(../image/list_bg2.jpg) repeat-x left center;
+        width: 100%;
+        height: 24px;
+        position: relative;
+        i{
+            background: url(../image/list_bg.jpg) no-repeat;
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            width: 9px;
+            height: 11px;
+            margin-top: -5px;
+        }
+        .l_squ{
+            left: 0px;
+        }
+        .r_squ{
+            right: 0px;
+        }
+        span{
+            display: inline-block;
+            font: bold 20px/24px "microsoft yahei";
+            color: #666;
+            padding: 0 40px;
+            background: #fff;
+            position: relative;
+        }
+    }
+    
+    
+}
+.list_content,.list_sold{
+    padding-bottom: 85px;
+    width: 110%;
+    background: #fff;
+    overflow: hidden;
+    dl{
+        width: 240px;
+        float: left;
+        color: #5d5d5d;
+        padding: 15px;
+        margin: 35px 40px 0 0;
+        overflow: hidden;
+    }
+    dt{
+        width: 240px;
+        height: 240px;
+        background: #fff;
+        position: relative;
+    }
+    .list_name{
+        width: 100%;
+        padding-top: 40px;
+        height: 36px;
+        line-height: 19px;
+        overflow: hidden;
+        a{
+            color: $fontC-middle;
+            &:hover{
+                color: $fontC-aHover-red-d;
+            }
+        }
+        
+    }
+    .list_value{
+        width: 100%;
+        height: 20px;
+        padding-top: 5px;
+        overflow: hidden;
+        line-height: 20px;
+        span{
+            color: #5d5d5d;
+            font-weight: bold;
+            font-size: 14px;
+            float: left;
+            font-family: "microsoft yahei";
+        }
+    }
+    
+}
+
+.list_sold{
+    dt{
+        background: white url(../image/sold.png) no-repeat right top;
+    }
+    
 }
