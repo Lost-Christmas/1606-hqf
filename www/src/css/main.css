@@ -92,6 +92,7 @@ i, em {
   border: 2px solid #51468c;
   padding-left: 10px;
   background: transparent;
+  line-height: 31px;
 }
 .logo #but {
   width: 69px;
@@ -178,7 +179,7 @@ i, em {
 }
 .head_nav .gwc {
   padding-left: 28px;
-  background: url(../image/gwc.png) no-repeat 11px center;
+  background: url(../image/gwc.png) no-repeat 11px 12px;
 }
 .head_nav .khfw {
   position: absolute;
@@ -207,6 +208,7 @@ i, em {
 .nav {
   width: 100%;
   overflow: hidden;
+  float: left;
 }
 .nav a {
   font-family: "microsoft yahei";

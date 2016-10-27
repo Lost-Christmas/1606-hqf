@@ -167,54 +167,10 @@ $(function () {
 	})
 })
 
-//底部轮播
-var $likenum=0;
-function likebox (flag,obj) {
-	$(".left-side,.right-side").prop({disabled: true});
-	if (flag) {
-		$likenum++;
-		if ($likenum==16) {
-			$likenum=-4;
-		}
-		obj.eq($likenum+4).css({"left":"1170px","display":"block"});
-		for (var i = 0; i < obj.length; i++) {
-			obj.eq(i).stop().animate({left:obj.eq(i).position().left-230+"px"},function () {
-				if ($likenum-1<0) {
-					obj.eq($likenum+19).css({"display":"none"});
-				}else{
-					obj.eq($likenum-1).css({"display":"none"});
-				}
-				$(".left-side,.right-side").removeAttr("disabled");
-			});
-		}
-	}else{
-		$likenum--;
-		if ($likenum==-1) {
-			$likenum=19;
-		}
-		obj.eq($likenum).css({"left":"-230px","display":"block"});
-		for (var i = 0; i < obj.length; i++) {
-			obj.eq(i).stop().animate({left:obj.eq(i).position().left+230+"px"},function () {
-				if ($likenum+5>19) {
-					obj.eq($likenum-15).css({"display":"none"});
-				}else{
-					obj.eq($likenum+5).css({"display":"none"});
-				}
-				$(".left-side,.right-side").removeAttr("disabled");
-			});
-		}
-	}
-}
-
-
-$(".like_box").on("click",".right-side",function () {
-	likebox(1,$(".likebox>a"));
-}).on("click",".left-side",function () {
-	likebox(0,$(".likebox>a"));
-})
 
 //倒计时
 function getTime (str) {
+	var Ostr=new Date(str);
 	var $Totime=Date.parse(str);
 	var today=new Date();
 	var $Fromtime=Date.parse(today);
@@ -247,6 +203,7 @@ $(function() {
 		},
 		function() {
 			$(this).children().removeClass("hover");
+
 		}
 	).last().click(function() {
 		flag = 1;
@@ -277,6 +234,7 @@ $(function() {
 		var $h = $(this).scrollTop();
 		var $div = $(".louti");
 		if($h > ($div.eq(2).offset().top - $div.eq(2).height() / 4)) {
+			$(".rightbar>li,.rightbar a").removeProp("disabled");
 			$(".rightbar>li").not(".top").css("visibility","visible");
 			$(".rightbar").stop().fadeIn(600);
 			for(var i = 0; i < $div.length - 2; i++) {
@@ -302,4 +260,57 @@ $(".global_left>ul>li").eq(4).click(function () {
 })
 $(".global_left>ul>li").eq(2).click(function () {
 	window.location.href="html/goods2.html"
+})
+
+
+
+//底部轮播
+var $likenum=0;
+function likebox (flag,obj) {
+	$(".left-side,.right-side").prop({disabled: true});
+	if (flag) {
+		$likenum++;
+		if ($likenum==20) {
+			$likenum=0;
+		}
+		if ($likenum>15) {
+			obj.eq($likenum-16).css({"left":"1170px","display":"block"});
+		}else{
+			obj.eq($likenum+4).css({"left":"1170px","display":"block"});
+		}
+		obj.not(":hidden").stop().animate({left:"-=230px"},600)
+		setTimeout(function () {
+			if($likenum==0){
+				obj.eq(19).css({"display":"none"});
+			} else if ($likenum>15) {
+				obj.eq($likenum-1).css({"display":"none"});
+			} else{
+				obj.not(":hidden").first().css({"display":"none"});
+			}
+			$(".left-side,.right-side").removeAttr("disabled");
+		},600)
+		
+	}else{
+		$likenum--;
+		if ($likenum==-1) {
+			$likenum=19;
+		}
+		obj.eq($likenum).css({"left":"-230px","display":"block"});
+		obj.not(":hidden").stop().animate({left:"+=230px"},600);
+		setTimeout(function () {
+			if ($likenum>=15) {
+				obj.eq($likenum-15).css({"display":"none"});
+			} else{
+				obj.not(":hidden").last().css({"display":"none"});
+			}
+			$(".left-side,.right-side").removeAttr("disabled");
+		},600)
+	}
+}
+
+
+$(".like_box").on("click",".right-side",function () {
+	likebox(1,$(".likebox>a"));
+}).on("click",".left-side",function () {
+	likebox(0,$(".likebox>a"));
 })

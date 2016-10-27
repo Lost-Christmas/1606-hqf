@@ -48,10 +48,10 @@
         position: absolute;top: 0px;left: 0px;width: 1020px;height: 400px;display: none;overflow: hidden;
     }
     .bigimg{
-        position: absolute;left: -10px;
+        position: relative;left: -10px;float: left;
     }
     .smallimg{
-        position: absolute;right: -10px;
+        position: absolute;right: -10px;z-index: 2;float: right;
     }
 }
 .global{
@@ -483,6 +483,9 @@
         .low,.mid,.hig{width: 30px;height: 14px;display: inline-block;background-color: #D6D6D6;line-height: 12px;text-align: center;margin-right: 5px;
         }
     }
+    #lo_check,#lo_argee{
+        border: none;padding: none;box-sizing: content-box;
+    }
     .strong_low{
         .low{background-color:#ff3600;}
     }
@@ -548,11 +551,14 @@
         border: 1px solid #dedede;
         font-size: 14px;
         font-weight: bold;
+        background-color: transparent;
         font-family: 'microsoft yahei';
+        position: relative;z-index: 4;
     }
     p{
         position: relative;
         margin-bottom: 15px;
+        z-index: 3;
         span{
             width: 15px;
             height: 17px;
@@ -575,6 +581,7 @@
             left: 7px;
             top: 18px;
             color: #999;
+            z-index: 2;
         }
     }
     .li_img{
@@ -682,7 +689,7 @@
             
             
             
-.firstgood{
+.firstgood,.secondgood{
     padding: 30px 0px 200px;background-color: #ededed;
     img{
         @extend %bigbox;
@@ -973,7 +980,7 @@
             width: 80px;height: 80px;border: 1px solid #eee;
         }
         .text{
-            display: inline-block;width: 30px;height: 20px;text-align: center;border: 1px solid #eee;border-width: 1px 0px;
+            display: inline-block;width: 30px;height: 20px;text-align: center;border: 1px solid #eee;border-width: 1px 0px;vertical-align: top;line-height: 20px;
         }
         .chover{
             &:hover{

@@ -24,15 +24,15 @@ $(function () {
 		var n=12;
 		$hei=$(".list_content").offset().top;
 		$minh=$(".list_content>dl:last").outerHeight();
-		$(document).scroll(function () {
+		$(window).scroll(function () {
 			var $h=$hei+$minh*(parseInt(n/4)+0.5);
 			if ($(window).scrollTop()+$(window).height()>=$h) {
 				if(n+1>json.hotSale.length){return false;}
-				console.log(n)
 				str='<dl><dt><a href="javascript:void(0);"><img src="'+json.hotSale[n].a+'"/></a></dt><dd><p class="list_name"><a href="javascript:void(0);">'+json.hotSale[n].b+'</a></p><p class="list_value"><span>'+json.hotSale[n].c+'</span></p></dd></dl>';
 				$(".list_content").append(str);
 				n++;
 			}
+			
 		})
 		
 		
@@ -59,6 +59,5 @@ $(function () {
 			});
 			})
 		})
-		
 	})	
 })

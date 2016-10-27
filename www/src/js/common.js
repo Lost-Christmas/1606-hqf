@@ -47,6 +47,10 @@ $(".gwc").click(function () {
 			window.location.href="html/shopcar.html";
 		}
 	})
+
+
+
+
 //head_nav
 $(".more:eq(1),.khfw").hover(
 	function () {

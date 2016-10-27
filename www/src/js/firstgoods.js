@@ -12,7 +12,7 @@ $(function () {
 			$(".littleimgbox").append(str);
 		}
 		$(".goods_content>h3>span>i").html(json.good1.id);
-		$("title,.g_right>h2").html(json.good1.name);
+		$(".g_right>h2").html(json.good1.name);
 		$(".g_value>i").html(json.good1.value);
 		$(".g_hover>i").html(json.good1.addr);
 		$(".g_right_mid .time").html(json.good1.time);
@@ -47,7 +47,6 @@ $(function () {
 			}
 			
 		})
-	}).done(function () {
 		$("#smallbox>img").attr("src",$(".littleimgbox>a").eq(0).children().attr("src"))
 		$("#big").css("background-image",$(".littleimgbox>a").eq(0).children().attr("src"))
 		$(".littleimgbox>a").on("mouseover",function () {
@@ -57,6 +56,7 @@ $(function () {
 			})
 			$("#smallbox>img").attr("src",$(".littleimgbox>a").eq($num).children().attr("src"))
 		})
+	}).done(function () {
 	})
 })
 

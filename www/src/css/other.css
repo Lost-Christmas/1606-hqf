@@ -27,11 +27,11 @@ i, em {
   font-style: normal;
 }
 
-.ad, .banner .banners, .global, .sale, .auction, .mall, .like, .log_top .log_tops, .log_center, #lo_foot .lo_foot_mid ul, .lo_foot_top, .lo_foot_bot p, .firstgood img, .goods_content, .sc_null, .list_mid {
+.ad, .banner .banners, .global, .sale, .auction, .mall, .like, .log_top .log_tops, .log_center, #lo_foot .lo_foot_mid ul, .lo_foot_top, .lo_foot_bot p, .firstgood img, .secondgood img, .goods_content, .sc_null, .list_mid {
   width: 1200px;
   margin: 0 auto;
 }
-.ad:after, .banner .banners:after, .global:after, .sale:after, .auction:after, .mall:after, .like:after, .log_top .log_tops:after, .log_center:after, #lo_foot .lo_foot_mid ul:after, .lo_foot_top:after, .lo_foot_bot p:after, .firstgood img:after, .goods_content:after, .sc_null:after, .list_mid:after {
+.ad:after, .banner .banners:after, .global:after, .sale:after, .auction:after, .mall:after, .like:after, .log_top .log_tops:after, .log_center:after, #lo_foot .lo_foot_mid ul:after, .lo_foot_top:after, .lo_foot_bot p:after, .firstgood img:after, .secondgood img:after, .goods_content:after, .sc_null:after, .list_mid:after {
   content: ".";
   display: block;
   clear: both;
@@ -155,12 +155,15 @@ i, em {
   overflow: hidden;
 }
 .imgbox .bigimg {
-  position: absolute;
+  position: relative;
   left: -10px;
+  float: left;
 }
 .imgbox .smallimg {
   position: absolute;
   right: -10px;
+  z-index: 2;
+  float: right;
 }
 
 .global {
@@ -944,6 +947,11 @@ i, em {
   text-align: center;
   margin-right: 5px;
 }
+.lo_form #lo_check, .lo_form #lo_argee {
+  border: none;
+  padding: none;
+  box-sizing: content-box;
+}
 .lo_form .strong_low .low {
   background-color: #ff3600;
 }
@@ -1039,11 +1047,15 @@ i, em {
   border: 1px solid #dedede;
   font-size: 14px;
   font-weight: bold;
+  background-color: transparent;
   font-family: 'microsoft yahei';
+  position: relative;
+  z-index: 4;
 }
 .li_form p {
   position: relative;
   margin-bottom: 15px;
+  z-index: 3;
 }
 .li_form p span {
   width: 15px;
@@ -1068,6 +1080,7 @@ i, em {
   left: 7px;
   top: 18px;
   color: #999;
+  z-index: 2;
 }
 .li_form .li_img {
   height: 60px;
@@ -1194,7 +1207,7 @@ i, em {
   height: 40px;
 }
 
-.firstgood {
+.firstgood, .secondgood {
   padding: 30px 0px 200px;
   background-color: #ededed;
 }
@@ -1606,6 +1619,8 @@ i, em {
   text-align: center;
   border: 1px solid #eee;
   border-width: 1px 0px;
+  vertical-align: top;
+  line-height: 20px;
 }
 .sc_center table .chover:hover {
   color: #e93b39;

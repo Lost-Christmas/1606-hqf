@@ -20,7 +20,7 @@
         float: left;padding-top: 50px;
     }
     #txt{
-        width: 398px;height: 31px;border: 2px solid #51468c;padding-left: 10px;background: transparent;
+        width: 398px;height: 31px;border: 2px solid #51468c;padding-left: 10px;background: transparent;line-height: 31px;
     }
     #but{
         width: 69px;height: 35px;background:url(../image/but_bg.jpg) repeat-x;color: white;font-size: 14px;vertical-align: top;font-family: "microsoft yahei";cursor: pointer;
@@ -62,7 +62,7 @@
             @include arrow(top,4px,$fontC-light);left: 58px;top: 17px;
         }
     }
-    .gwc{padding-left: 28px;background: url(../image/gwc.png) no-repeat 11px center;}
+    .gwc{padding-left: 28px;background: url(../image/gwc.png) no-repeat 11px 12px;}
     .khfw{
         position: absolute;
         background: #f5f5f5;
@@ -85,7 +85,7 @@
     }
 }
 .nav{
-    width: 100%;overflow:hidden;
+    width: 100%;overflow:hidden;float: left;
     a{
         font-family: "microsoft yahei";font-size: $fontS-middle;@include align(34px);
     }

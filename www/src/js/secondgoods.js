@@ -13,7 +13,7 @@ $(function () {
 			$(".littleimgbox").append(str);
 		}
 		$(".goods_content>h3>span>i").html(json.good2.id);
-		$("title,.g_right>h2").html(json.good2.name);
+		$(".g_right>h2").html(json.good2.name);
 		$(".g_value>i").html(json.good2.value);
 		$(".g_hover>i").html(json.good2.addr);
 		$(".g_right_mid .time").html(json.good2.time);
@@ -32,7 +32,7 @@ $(function () {
 					addr:json.good2.addr,
 					img:json.good2.img[0],
 					num:$num,
-					link:"../html/secondgoods.html",
+					link:"../html/goods2.html",
 					id:"id"+json.good2.id
 			}
 			if (obj.id in goods) {
